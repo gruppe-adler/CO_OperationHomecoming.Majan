@@ -10,4 +10,4 @@ params ["_helper"];
         ["quite", ["messy","PuristaBold"]]
     ] call GRAD_leaveNotes_fnc_spawnNote;
 
-}, [], 20] call CBA_fnc_waitAndExecute;
+}, [_helper], 20] call CBA_fnc_waitAndExecute;
