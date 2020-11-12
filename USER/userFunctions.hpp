@@ -13,6 +13,8 @@ class homecoming
            class ownerShipHandler { postInit = 1; };
            class soundSourceHelper;
 
+           class spawnNote;
+
            class suicideCar;
            class suicideCarCalculatePath;
            class suicideCarExplode;           
@@ -20,3 +22,5 @@ class homecoming
            class suicideCarShockwave;
        };
 };
+
+#include "..\node_modules\grad-leaveNotes\cfgFunctions.hpp"

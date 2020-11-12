@@ -9,6 +9,8 @@ loadScreen = "data\loading.paa";                                                
 overviewPicture = "";                                                           // Bild, das in der Missionsauswahl angezeigt wird
 overviewText = "";                                                              // Text, der in der Missionsauswahl angezeigt wird
 
+#include "..\node_modules\grad-leaveNotes\grad_leaveNotes.hpp"
+
 class CfgSFX
 {
     sounds[] = {};
