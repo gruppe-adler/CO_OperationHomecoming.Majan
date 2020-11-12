@@ -11,6 +11,7 @@ class homecoming
 
            class addModules { postInit = 1; };
            class ownerShipHandler { postInit = 1; };
+           class soundSourceHelper;
 
            class suicideCar;
            class suicideCarCalculatePath;

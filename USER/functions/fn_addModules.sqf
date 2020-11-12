@@ -68,12 +68,113 @@
 
     } forEach allCurators;
 
-    ["H O M E C O M I N G", "Suicide Car",
+    ["H O M E C O M I N G - FX", "Suicide Car",
     {
       // Get all the passed parameters
       params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
       [_position] remoteExec ["homecoming_fnc_suicideCar", 2];
+
+    }] call zen_custom_modules_fnc_register;
+
+
+    ["H O M E C O M I N G - DSAI", "DSAI Mute Unit",
+    {
+      // Get all the passed parameters
+      params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+      
+      (leader _objectUnderCursor) setVariable ["RUG_DSAI_OVERRIDE", 1, true];
+
+    }] call zen_custom_modules_fnc_register;
+
+    ["H O M E C O M I N G - DSAI", "DSAI UnMute Unit",
+    {
+      // Get all the passed parameters
+      params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+
+      (leader _objectUnderCursor) setVariable ["RUG_DSAI_OVERRIDE", 0, true];
+
+    }] call zen_custom_modules_fnc_register;
+
+
+
+    ["H O M E C O M I N G - SFX", "Arab Song 1",
+    {
+      // Get all the passed parameters
+      params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+      private _source = createSoundSource ["sfxsound19", _position, [], 0];
+      [_source, _position] call homecoming_fnc_soundSourceHelper;
+
+    }] call zen_custom_modules_fnc_register;
+
+    ["H O M E C O M I N G - SFX", "Arab Song 2",
+    {
+      // Get all the passed parameters
+      params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+      private _source = createSoundSource ["sfxsound20", _position, [], 0];
+      [_source, _position] call homecoming_fnc_soundSourceHelper;
+
+    }] call zen_custom_modules_fnc_register;
+
+    ["H O M E C O M I N G - SFX", "Arab Song 3",
+    {
+      // Get all the passed parameters
+      params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+      private _source = createSoundSource ["sfxsound10", _position, [], 0];
+      [_source, _position] call homecoming_fnc_soundSourceHelper;
+
+    }] call zen_custom_modules_fnc_register;
+
+    ["H O M E C O M I N G - SFX", "Arab Song 4",
+    {
+      // Get all the passed parameters
+      params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+      private _source = createSoundSource ["sfxsound11", _position, [], 0];
+      [_source, _position] call homecoming_fnc_soundSourceHelper;
+
+    }] call zen_custom_modules_fnc_register;
+
+
+
+
+    ["H O M E C O M I N G - SFX", "Arab Radio Traffic",
+    {
+      // Get all the passed parameters
+      params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+      private _source = createSoundSource ["sfxsound18", _position, [], 0];
+      [_source, _position] call homecoming_fnc_soundSourceHelper;
+
+    }] call zen_custom_modules_fnc_register;
+
+
+
+    ["H O M E C O M I N G - SFX", "ISIS Speaker Propaganda",
+    {
+      // Get all the passed parameters
+      params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+      private _source = createSoundSource ["sfxsound16", _position, [], 0];
+      [_source, _position] call homecoming_fnc_soundSourceHelper;
+
+    }] call zen_custom_modules_fnc_register;
+
+
+
+
+    ["H O M E C O M I N G - SFX", "Prayer",
+    {
+      // Get all the passed parameters
+      params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+      private _source = createSoundSource ["sfxsound14", _position, [], 0];
+      [_source, _position] call homecoming_fnc_soundSourceHelper;
 
     }] call zen_custom_modules_fnc_register;
 

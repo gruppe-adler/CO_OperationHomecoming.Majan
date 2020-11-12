@@ -17,7 +17,7 @@ class CfgSFX
     {
         name = "sfxsound";
         sounds[]={sfxsound};
-        sfxsound[]={"USER\sound\sfxsound.ogg",15,1,18,1,1,1,0};
+        sfxsound[]={"USER\sound\sfxsound.ogg",35,1,150,1,1,1,0};
         empty[]= {"",0,0,0,0,0,0,0};
     };
  
@@ -25,7 +25,7 @@ class CfgSFX
     {
         name = "sfxsound2";
         sounds[]={sfxsound};
-        sfxsound[]={"USER\sound\sfxsound2.ogg",15,1,18,1,1,1,0};
+        sfxsound[]={"USER\sound\sfxsound2.ogg",35,1,150,1,1,1,0};
         empty[]= {"",0,0,0,0,0,0,0};
     };
 
@@ -33,7 +33,7 @@ class CfgSFX
     {
         name = "sfxsound3";
         sounds[]={sfxsound};
-        sfxsound[]={"USER\sound\sfxsound3.ogg",15,1,18,1,1,1,0};
+        sfxsound[]={"USER\sound\sfxsound3.ogg",35,1,150,1,1,1,0};
         empty[]= {"",0,0,0,0,0,0,0};
     };
 
@@ -41,7 +41,7 @@ class CfgSFX
     {
         name = "sfxsound4";
         sounds[]={sfxsound};
-        sfxsound[]={"USER\sound\sfxsound4.ogg",15,1,18,1,1,1,0};
+        sfxsound[]={"USER\sound\sfxsound4.ogg",35,1,150,1,1,1,0};
         empty[]= {"",0,0,0,0,0,0,0};
     };
 
@@ -49,14 +49,14 @@ class CfgSFX
     {
         name = "sfxsound5";
         sounds[]={sfxsound};
-        sfxsound[]={"USER\sound\sfxsound5.ogg",15,1,18,1,1,1,0};
+        sfxsound[]={"USER\sound\sfxsound5.ogg",35,1,150,1,1,1,0};
         empty[]= {"",0,0,0,0,0,0,0};
     };
         class sfxsound6
     {
         name = "sfxsound6";
         sounds[]={sfxsound};
-        sfxsound[]={"USER\sound\sfxsound2.ogg",15,1,18,1,1,1,0};
+        sfxsound[]={"USER\sound\sfxsound2.ogg",35,1,150,1,1,1,0};
         empty[]= {"",0,0,0,0,0,0,0};
     };
 
@@ -64,7 +64,7 @@ class CfgSFX
     {
         name = "sfxsound7";
         sounds[]={sfxsound};
-        sfxsound[]={"USER\sound\sfxsound3.ogg",15,1,18,1,1,1,0};
+        sfxsound[]={"USER\sound\sfxsound3.ogg",35,1,150,1,1,1,0};
         empty[]= {"",0,0,0,0,0,0,0};
     };
 
@@ -72,7 +72,7 @@ class CfgSFX
     {
         name = "sfxsound8";
         sounds[]={sfxsound};
-        sfxsound[]={"USER\sound\sfxsound4.ogg",15,1,18,1,1,1,0};
+        sfxsound[]={"USER\sound\sfxsound4.ogg",35,1,150,1,1,1,0};
         empty[]= {"",0,0,0,0,0,0,0};
     };
 
@@ -80,7 +80,7 @@ class CfgSFX
     {
         name = "news1";
         sounds[]={sfxsound};
-        sfxsound[]={"USER\sound\news1.ogg",15,1,18,1,1,1,0};
+        sfxsound[]={"USER\sound\news1.ogg",35,1,150,1,1,1,0};
         empty[]= {"",0,0,0,0,0,0,0};
     };
         
@@ -88,7 +88,7 @@ class CfgSFX
     {
         name = "music1";
         sounds[]={sfxsound};
-        sfxsound[]={"USER\sound\music1.ogg",15,1,18,1,1,1,0};
+        sfxsound[]={"USER\sound\music1.ogg",35,1,150,1,1,1,0};
         empty[]= {"",0,0,0,0,0,0,0};
     };
 
@@ -96,7 +96,7 @@ class CfgSFX
     {
         name = "music2";
         sounds[]={sfxsound};
-        sfxsound[]={"USER\sound\music2.ogg",15,1,18,1,1,1,0};
+        sfxsound[]={"USER\sound\music2.ogg",35,1,150,1,1,1,0};
         empty[]= {"",0,0,0,0,0,0,0};
     };
         
@@ -104,7 +104,7 @@ class CfgSFX
     {
         name = "kunduznews";
         sounds[]={sfxsound};
-        sfxsound[]={"USER\sound\kunduznews.ogg",15,1,18,1,1,1,0};
+        sfxsound[]={"USER\sound\kunduznews.ogg",35,1,150,1,1,1,0};
         empty[]= {"",0,0,0,0,0,0,0};
     };
         
@@ -112,7 +112,7 @@ class CfgSFX
     {
         name = "SanginnewsBBC";
         sounds[]={sfxsound};
-        sfxsound[]={"USER\sound\SanginnewsBBC.ogg",15,1,18,1,1,1,0};
+        sfxsound[]={"USER\sound\SanginnewsBBC.ogg",35,1,150,1,1,1,0};
         empty[]= {"",0,0,0,0,0,0,0};
     };
 
@@ -120,7 +120,7 @@ class CfgSFX
     {
         name = "prayer2";
         sounds[]={sfxsound};
-        sfxsound[]={"USER\sound\prayer2.ogg",15,1,24,1,1,1,0};
+        sfxsound[]={"USER\sound\prayer2.ogg",35,1,150,1,1,1,0};
         empty[]= {"",0,0,0,0,0,0,0};
     };
         
@@ -128,7 +128,7 @@ class CfgSFX
     {
         name = "Britishnews";
         sounds[]={sfxsound};
-        sfxsound[]={"USER\sound\Britishnews.ogg",15,1,18,1,1,1,0};
+        sfxsound[]={"USER\sound\Britishnews.ogg",35,1,150,1,1,1,0};
         empty[]= {"",0,0,0,0,0,0,0};
     };
 
@@ -136,7 +136,7 @@ class CfgSFX
     {
         name = "ISISpropoganda";
         sounds[]={sfxsound};
-        sfxsound[]={"USER\sound\ISISpropoganda.ogg",15,1,24,1,1,1,0};
+        sfxsound[]={"USER\sound\ISISpropoganda.ogg",35,1,150,1,1,1,0};
         empty[]= {"",0,0,0,0,0,0,0};
     };
         
@@ -144,7 +144,7 @@ class CfgSFX
     {
         name = "IEDchatter";
         sounds[]={sfxsound};
-        sfxsound[]={"USER\sound\IEDchatter.ogg",15,1,18,1,1,1,0};
+        sfxsound[]={"USER\sound\IEDchatter.ogg",35,1,150,1,1,1,0};
         empty[]= {"",0,0,0,0,0,0,0};
     };
 
@@ -152,7 +152,7 @@ class CfgSFX
     {
         name = "arab_talking";
         sounds[]={sfxsound};
-        sfxsound[]={"USER\sound\arab_talking.ogg",15,1,18,1,1,1,0};
+        sfxsound[]={"USER\sound\arab_talking.ogg",35,1,150,1,1,1,0};
         empty[]= {"",0,0,0,0,0,0,0};
     };
 
@@ -160,7 +160,7 @@ class CfgSFX
     {
         name = "arabicsong1";
         sounds[]={sfxsound};
-        sfxsound[]={"USER\sound\arabicsong1.ogg",15,1,24,1,1,1,0};
+        sfxsound[]={"USER\sound\arabicsong1.ogg",35,1,150,1,1,1,0};
         empty[]= {"",0,0,0,0,0,0,0};
     };
         
@@ -168,7 +168,112 @@ class CfgSFX
     {
         name = "arabicsong2";
         sounds[]={sfxsound};
-        sfxsound[]={"USER\sound\arabicsong2.ogg",15,1,18,1,1,1,0};
+        sfxsound[]={"USER\sound\arabicsong2.ogg",35,1,150,1,1,1,0};
         empty[]= {"",0,0,0,0,0,0,0};
     };
+};
+
+class CfgVehicles
+{
+    class sfxsound // class name to be used with createSoundSource
+    {
+        sound = "sfxsound"; // reference to CfgSFX class
+    };
+
+    class sfxsound2 // class name to be used with createSoundSource
+    {
+        sound = "sfxsound2"; // reference to CfgSFX class
+    };
+
+    class sfxsound3 // class name to be used with createSoundSource
+    {
+        sound = "sfxsound3"; // reference to CfgSFX class
+    };
+
+    class sfxsound4 // class name to be used with createSoundSource
+    {
+        sound = "sfxsound4"; // reference to CfgSFX class
+    };
+
+    class sfxsound5 // class name to be used with createSoundSource
+    {
+        sound = "sfxsound5"; // reference to CfgSFX class
+    };
+
+    class sfxsound6 // class name to be used with createSoundSource
+    {
+        sound = "sfxsound6"; // reference to CfgSFX class
+    };
+
+    class sfxsound7 // class name to be used with createSoundSource
+    {
+        sound = "sfxsound7"; // reference to CfgSFX class
+    };
+
+    class sfxsound8 // class name to be used with createSoundSource
+    {
+        sound = "sfxsound8"; // reference to CfgSFX class
+    };
+
+    class sfxsound9 // class name to be used with createSoundSource
+    {
+        sound = "sfxsound9"; // reference to CfgSFX class
+    };
+
+    class sfxsound10 // class name to be used with createSoundSource
+    {
+        sound = "sfxsound10"; // reference to CfgSFX class
+    };
+
+    class sfxsound11 // class name to be used with createSoundSource
+    {
+        sound = "sfxsound11"; // reference to CfgSFX class
+    };
+
+    class sfxsound12 // class name to be used with createSoundSource
+    {
+        sound = "sfxsound12"; // reference to CfgSFX class
+    };
+
+    class sfxsound13 // class name to be used with createSoundSource
+    {
+        sound = "sfxsound13"; // reference to CfgSFX class
+    };
+
+    class sfxsound14 // class name to be used with createSoundSource
+    {
+        sound = "sfxsound14"; // reference to CfgSFX class
+    };
+
+    class sfxsound15 // class name to be used with createSoundSource
+    {
+        sound = "sfxsound15"; // reference to CfgSFX class
+    };
+
+    class sfxsound16 // class name to be used with createSoundSource
+    {
+        sound = "sfxsound16"; // reference to CfgSFX class
+    };
+
+    class sfxsound17 // class name to be used with createSoundSource
+    {
+        sound = "sfxsound17"; // reference to CfgSFX class
+    };
+
+    class sfxsound18 // class name to be used with createSoundSource
+    {
+        sound = "sfxsound18"; // reference to CfgSFX class
+    };
+
+    class sfxsound19 // class name to be used with createSoundSource
+    {
+        sound = "sfxsound19"; // reference to CfgSFX class
+    };
+
+    class sfxsound20 // class name to be used with createSoundSource
+    {
+        sound = "sfxsound20"; // reference to CfgSFX class
+    };
+
+
 };
