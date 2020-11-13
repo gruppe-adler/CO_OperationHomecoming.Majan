@@ -11,4 +11,10 @@ if (isServer) then {
     {
         _x setVariable ["RUG_DSAI_OVERRIDE", 1];
     } forEach (playableUnits + switchableUnits);
+
+    private _objects = nearestObjects [[worldSize/2, worldSize/2], ["House"], 5000]; 
+    { _x switchLight "OFF"; } forEach _objects;
+
+    private _objects = nearestObjects [[worldSize/2, worldSize/2], ["StreetLamp"], 5000]; 
+    { _x switchLight "ON"; } forEach _objects;
 };

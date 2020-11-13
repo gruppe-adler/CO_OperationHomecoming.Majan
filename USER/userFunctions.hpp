@@ -12,6 +12,8 @@ class homecoming
            class addModules { postInit = 1; };
 
            class createSmoke;
+           class intro { postInit = 1; };
+           class startIntro;
            
            class ownerShipHandler { postInit = 1; };
            class soundSourceHelper;
