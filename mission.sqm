@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2989;
+		nextID=2996;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2257.0652,14.558117,2568.8433};
-		dir[]={-0.18872298,-0.39749694,-0.89809144};
-		up[]={-0.081773438,0.91753334,-0.38912949};
-		aside[]={-0.97871405,-1.5582191e-006,0.2056675};
+		pos[]={1665.175,17.291124,2331.4053};
+		dir[]={0.82718873,-0.56165105,0.021527437};
+		up[]={0.56148422,0.82735336,0.014614841};
+		aside[]={0.026021225,-7.5332719e-007,-0.99973083};
 	};
 };
 binarizationWanted=0;
@@ -136,13 +136,22 @@ addons[]=
 	"po_factions_afr",
 	"cba_xeh",
 	"rhs_cti_insurgents",
-	"rhsgref_main"
+	"rhsgref_main",
+	"A3_Characters_F_Jets",
+	"A3_Characters_F_Orange_Headgear",
+	"ace_gforces",
+	"ace_realisticnames",
+	"ace_attach",
+	"ace_chemlights",
+	"A3_Structures_F_EPA_Civ_Constructions",
+	"ace_interaction",
+	"ace_dragging"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=81;
+		items=87;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -650,6 +659,48 @@ class AddonsMetaData
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
+		class Item81
+		{
+			className="A3_Characters_F_Jets";
+			name="Arma 3 Jets - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item82
+		{
+			className="A3_Characters_F_Orange";
+			name="Arma 3 Orange - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item83
+		{
+			className="ace_attach";
+			name="ACE3 - Attach";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item84
+		{
+			className="ace_chemlights";
+			name="ace_chemlights";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item85
+		{
+			className="ace_interaction";
+			name="ACE3 - Interaction";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item86
+		{
+			className="ace_dragging";
+			name="ACE3 - Dragging";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
 	};
 };
 class DynamicSimulation
@@ -667,7 +718,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category0
+	class Category1
 	{
 		name="Scenario";
 		class Attribute0
@@ -5347,7 +5398,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=103;
+		items=108;
 		class Item0
 		{
 			dataType="Layer";
@@ -20459,7 +20510,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={1860.7985,10.496296,1954.5178};
+						position[]={1860.7983,10.496296,1954.5182};
 					};
 					areaSize[]={1,-1,1};
 					id=1586;
@@ -28761,7 +28812,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={2068.9534,10.499137,2596.9023};
+						position[]={2068.9539,10.499137,2596.9026};
 					};
 					areaSize[]={1,-1,1};
 					id=1798;
@@ -31656,7 +31707,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={1809.9993,10.493239,2360.0098};
+						position[]={1809.9994,10.493239,2360.0098};
 					};
 					areaSize[]={1,-1,1};
 					id=2038;
@@ -31849,7 +31900,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={1810.0149,10.493239,2364.1697};
+						position[]={1810.015,10.493239,2364.1697};
 					};
 					areaSize[]={1,-1,1};
 					id=2043;
@@ -34808,6 +34859,190 @@ class Mission
 			id=2988;
 			type="rhs_Flag_Insurgents";
 			atlOffset=1.8161917;
+		};
+		class Item103
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1673.0784,11.080293,2329.4343};
+				angles[]={-0,2.8645756,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=2989;
+			type="Camera1";
+		};
+		class Item104
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1671.2965,10.552903,2332.2156};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=2991;
+			type="Land_Carpet_EP1";
+		};
+		class Item105
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1672.8606,10.552903,2332.1438};
+				angles[]={-0,3.1724019,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=2992;
+			type="Land_Carpet_EP1";
+		};
+		class Item106
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1671.626,10.62268,2331.9951};
+						angles[]={0,2.5521078,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="U_B_PilotCoveralls";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="SmokeShellOrange";
+										count=1;
+										ammoLeft=1;
+									};
+									class Item1
+									{
+										name="Chemlight_green";
+										count=2;
+										ammoLeft=1;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+							headgear="H_HeadBandage_bloody_F";
+						};
+					};
+					id=2994;
+					type="B_Fighter_Pilot_F";
+					atlOffset=0.13599968;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male05ENG";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=2993;
+			atlOffset=0.13599968;
+		};
+		class Item107
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1677.7358,11.569055,2327.6833};
+				angles[]={0,2.235898,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=2995;
+			type="Land_PortableLight_single_F";
 		};
 	};
 	class Connections
