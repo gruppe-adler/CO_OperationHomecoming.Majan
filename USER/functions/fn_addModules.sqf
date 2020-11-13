@@ -166,6 +166,17 @@
     }] call zen_custom_modules_fnc_register;
 
 
+    ["H O M E C O M I N G - FX", "Switch Lights Off",
+    {
+      // Get all the passed parameters
+      params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+      private _objects = nearestObjects [[worldSize/2, worldSize/2], ["House", "StreetLamp"], 5000];
+      {_x switchLight "OFF";} forEach _objects;
+
+    }] call zen_custom_modules_fnc_register;
+
+
 
 
     ["H O M E C O M I N G - SFX", "Prayer",

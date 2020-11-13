@@ -10,6 +10,9 @@ class homecoming
            file = "USER\functions";
 
            class addModules { postInit = 1; };
+
+           class createSmoke;
+           
            class ownerShipHandler { postInit = 1; };
            class soundSourceHelper;
 
