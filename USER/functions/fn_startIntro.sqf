@@ -3,6 +3,13 @@ cutText ["", "BLACK IN", 15];
 private _musicVolumeCache = musicVolume;
 0 fadeMusic 1;
 
+if (isNull introPilot || isNull introNissan2) exitWith {
+    cutText ["", "BLACK IN", 5];
+    sleep 5;
+    diwako_dui_main_toggled_off = false;
+    1 fadeMusic _musicVolumeCache;
+};
+
 private _camera = "camera" camCreate (getPos introPos_1);
 
 showCinemaBorder true;
