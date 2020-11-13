@@ -14,6 +14,8 @@ _position set [2,3];
 
 [_position] remoteExecCall ["homecoming_fnc_suicideCarShockwave", 0];
 
+[_car, "shards_burning", true] remoteExecCall ["homecoming_fnc_createSmoke", 0];
+
 // spawn clutter for lolz
 for "_i" from 1 to 4 do {
     private _tyre = createVehicle ["Land_Tyre_F", _position, [], 0, "CAN_COLLIDE"];

@@ -16,7 +16,7 @@ switch (_effect) do {
     // case "smoke2" : {  _particleClass = ["ObjectDestructionSmoke2", "ObjectDestructionSmoke2x"]; }; // doesnt work 
     case "fire1" : {  _particleClass = ["ObjectDestructionFire1", "ObjectDestructionFire1Smallx"]; };
     case "fire2" : {  _particleClass = ["ObjectDestructionFire2", "ObjectDestructionFire2Smallx"]; };
-    case "shards_burning" : { _particleClass = ["ObjectDestructionShardsBurning1", "ObjectDestructionShardsBurningSmall1"]; };
+    case "shards_burning" : { _particleClass = ["ObjectDestructionShardsBurning1", "ObjectDestructionShardsBurning1"]; };
     // case "vehExpSmoke" : { _particleClass = ["VehExpSmoke", "none"]; }; // only works instant
     case "vehExpSmokeSmall" : { _particleClass = ["vehExpSmokeSmall", "none"]; };
     case "vehExpSmoke2" : { _particleClass = ["VehExpSmoke", "none"]; };

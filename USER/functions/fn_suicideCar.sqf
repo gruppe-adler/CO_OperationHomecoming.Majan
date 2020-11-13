@@ -14,7 +14,13 @@ _car setPilotLight false;
 
 _car setVehicleLock "LOCKED";
 _car allowCrewInImmobile true;
-(driver _car) setBehaviour "CARELESS";
+_driver setBehaviour "CARELESS";
+_driver disableAI "AUTOCOMBAT";
+_driver disableAI "MINEDETECTION";
+_driver disableAI "TARGET";
+_driver disableAI "SUPPRESSION";
+
+_driver setVariable ["assignedCar", _car];
 
 {
     if (typeOf _x == "MetalBarrel_burning_F") then {
@@ -35,12 +41,13 @@ _car addEventHandler ["Hit", {
     };
 }];
 
-_car addEventHandler ["Killed", {
-    params ["_unit", "_source", "_damage", "_instigator"];
+_driver addEventHandler ["Killed", {
+    params ["_unit", "_killer", "_instigator", "_useEffects"];
 
-    private _killedByHit = _unit getVariable ["killedByHit", false];
+    private _car = _unit getVariable ["assignedCar", objNull];
+    private _killedByHit = _car getVariable ["killedByHit", false];
 
     if (!_killedByHit) then {
-        [_unit] call homecoming_fnc_suicideCarExplode;
+        [_car] call homecoming_fnc_suicideCarExplode;
     };
 }];
