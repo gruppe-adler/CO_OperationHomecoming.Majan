@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=409;
+		nextID=428;
 	};
 	class Camera
 	{
-		pos[]={1758.1366,50.448978,2836.9548};
-		dir[]={-0.83357507,-0.49204373,-0.25113606};
-		up[]={-0.47112834,0.87056577,-0.14193943};
-		aside[]={-0.28847286,-1.1906377e-007,0.95750135};
+		pos[]={1753.1996,35.489243,2273.3384};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -827,7 +827,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category1
+	class Category0
 	{
 		name="Scenario";
 		class Attribute0
@@ -10025,7 +10025,7 @@ class Mission
 				};
 			};
 			id=729;
-			atlOffset=-0.0056972504;
+			atlOffset=-0.022788048;
 		};
 		class Item2
 		{
@@ -11029,7 +11029,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3796.6631,12.965984,1648.2745};
-				angles[]={-0,0.45549601,0};
+				angles[]={0,0.45549601,0};
 			};
 			side="Empty";
 			flags=4;
@@ -11516,7 +11516,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="Locked Hospital NOSIM";
-			state=1;
 			class Entities
 			{
 				items=293;
@@ -21809,7 +21808,7 @@ class Mission
 					{
 					};
 					id=2911;
-					atlOffset=-10.497765;
+					atlOffset=0.55900097;
 				};
 				class Item266
 				{
@@ -22915,7 +22914,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="Locked Barricades NOSIM";
-			state=1;
 			class Entities
 			{
 				items=78;
@@ -24771,7 +24769,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{if (isServer) then { [this, ""wreck""] call homecoming_fnc_createSmoke;};}";
+						init="call{if (isServer) then { [this, ""oily_medium""] call homecoming_fnc_createSmoke;};}";
 						disableSimulation=1;
 					};
 					id=2210;
@@ -26039,7 +26037,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="Locked Decals NODAM";
-			state=1;
 			class Entities
 			{
 				items=223;
@@ -34078,7 +34075,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{if (isServer) then {  [this, ""BigDestructionSmoke""] call homecoming_fnc_createSmoke; };}";
+						init="call{if (isServer) then {  [this, ""burningvehicle""] call homecoming_fnc_createSmoke; };}";
 					};
 					id=3007;
 					type="Land_ShellCrater_02_extralarge_F";
@@ -34091,7 +34088,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="Locked hideObjects";
-			state=1;
 			class Entities
 			{
 				items=64;
@@ -34100,7 +34096,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={1860.7969,10.496296,1954.5161};
+						position[]={1860.7969,10.496296,1954.516};
 					};
 					areaSize[]={1,-1,1};
 					id=1586;
@@ -42402,7 +42398,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={2068.9507,10.499137,2596.9021};
+						position[]={2068.9497,10.499137,2596.9031};
 					};
 					areaSize[]={1,-1,1};
 					id=1798;
@@ -42788,7 +42784,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={2069.6765,10.499137,2608.9673};
+						position[]={2069.675,10.499137,2608.9673};
 					};
 					areaSize[]={1,-1,1};
 					id=1800;
@@ -45297,7 +45293,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={1809.9996,10.493239,2360.0156};
+						position[]={1810,10.493239,2360.0166};
 					};
 					areaSize[]={1,-1,1};
 					id=2038;
@@ -45490,7 +45486,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={1810.0153,10.493239,2364.1755};
+						position[]={1810.0156,10.493239,2364.1765};
 					};
 					areaSize[]={1,-1,1};
 					id=2043;
@@ -46043,7 +46039,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="Wrecks NOSIM";
-			state=1;
 			class Entities
 			{
 				items=12;
@@ -46534,7 +46529,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="powerlines NOSIM";
-			state=1;
 			class Entities
 			{
 				items=29;
@@ -47717,7 +47711,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="Ruins and Prop Buildings NOSIM";
-			state=1;
 			class Entities
 			{
 				items=25;
@@ -48726,7 +48719,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="Wires NOSIM";
-			state=1;
 			class Entities
 			{
 				items=7;
@@ -51476,7 +51468,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3795.7258,10.490374,1652.6711};
-				angles[]={-0,2.2628205,0};
+				angles[]={0,2.2628205,0};
 			};
 			side="Empty";
 			flags=4;
@@ -53905,7 +53897,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="BASE NOSIM";
-			state=1;
 			class Entities
 			{
 				items=52;
@@ -56124,7 +56115,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="Lamps DYNSIM";
-			state=1;
 			class Entities
 			{
 				items=14;
@@ -56697,7 +56687,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="STUFF NOSIM SO";
-			state=1;
 			class Entities
 			{
 				items=72;
@@ -57794,7 +57783,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
-						init="call{if (isServer) then { [this, ""medium""] call homecoming_fnc_createSmoke;};}";
+						init="call{if (isServer) then { [this, ""oily_small""] call homecoming_fnc_createSmoke;};}";
 						disableSimulation=1;
 					};
 					id=2916;
@@ -58157,12 +58146,11 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="call{if (isServer) then { [this, ""fire1""] call homecoming_fnc_createSmoke;};}";
+						init="call{if (isServer) then { [this, ""wood_light""] call homecoming_fnc_createSmoke;};}";
 						disableSimulation=1;
 					};
 					id=2923;
 					type="Land_ManurePile_01_F";
-					atlOffset=-9.5367432e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -58280,7 +58268,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{if (isServer) then { [this, ""wreck""] call homecoming_fnc_createSmoke;};}";
+						init="call{if (isServer) then { [this, ""wood_light""] call homecoming_fnc_createSmoke;};}";
 						disableSimulation=1;
 					};
 					id=2932;
@@ -58556,7 +58544,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
-						init="call{if (isServer) then { [this, ""BigDestructionSmoke""] call homecoming_fnc_createSmoke;};}";
+						init="call{if (isServer) then { [this, ""wood_light""] call homecoming_fnc_createSmoke;};}";
 						disableSimulation=1;
 					};
 					id=2917;
@@ -58598,7 +58586,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{if (isServer) then { [this, ""BigDestructionSmoke""] call homecoming_fnc_createSmoke;};}";
+						init="call{if (isServer) then { [this, ""oily_large""] call homecoming_fnc_createSmoke;};}";
 						disableSimulation=1;
 					};
 					id=2915;
@@ -58640,7 +58628,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{if (isServer) then { [this, ""BigDestructionSmoke""] call homecoming_fnc_createSmoke;};}";
+						init="call{if (isServer) then { [this, ""wood_light""] call homecoming_fnc_createSmoke;};}";
 						disableSimulation=1;
 					};
 					id=2914;

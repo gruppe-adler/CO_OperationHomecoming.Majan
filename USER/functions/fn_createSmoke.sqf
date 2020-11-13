@@ -1,51 +1,143 @@
-params ["_object", ["_effect", "small"], ["_instant", false]];
+params ["_object", ["_effect", "burningvehicle"]];
 
-private _particleClass = ["ObjectDestructionSmokeSmallx", "ObjectDestructionSmoke1_2Smallx"];
+private _effects = [];
 
 switch (_effect) do { 
-    case "small" : {  _particleClass = ["ObjectDestructionSmokeSmallx", "ObjectDestructionSmoke1_2Smallx"]; }; // longish
-    case "small2": { _particleClass = ["SmallDestructionSmoke", "none"]; };
-    case "wreck" : { _particleClass = ["SmallWreckSmoke", "none"]; }; // very small
-    // case "WreckSmokeSmall" : { _particleClass = ["WreckSmokeSmall", "none"]; }; // does not work
-    case "medium" : {  _particleClass = ["ObjectDestructionSmoke", "ObjectDestructionSmoke1_2"]; };
-    // case "medium2" : { _particleClass = ["SmokeMed", "none"]; }; // does not work
-    // case "big" : { _particleClass = ["SmokeBig", "none"]; }; // does not work
-    case "BigDestructionSmoke" : { _particleClass = ["BigDestructionSmoke", "none"]; }; // very nice
-    case "fuel" : {  _particleClass = ["ObjectDestructionSmokeFuelS", "ObjectDestructionSmokeFuelS1_2"]; };
-    // case "smoke2" : {  _particleClass = ["ObjectDestructionSmoke2", "ObjectDestructionSmoke2x"]; }; // doesnt work 
-    case "fire1" : {  _particleClass = ["ObjectDestructionFire1", "ObjectDestructionFire1Smallx"]; };
-    case "fire2" : {  _particleClass = ["ObjectDestructionFire2", "ObjectDestructionFire2Smallx"]; };
-    case "shards_burning" : { _particleClass = ["ObjectDestructionShardsBurning1", "ObjectDestructionShardsBurning1"]; };
-    // case "vehExpSmoke" : { _particleClass = ["VehExpSmoke", "none"]; }; // only works instant
-    case "vehExpSmokeSmall" : { _particleClass = ["vehExpSmokeSmall", "none"]; };
-    case "vehExpSmoke2" : { _particleClass = ["VehExpSmoke", "none"]; };
-    case "vehExpSmoke2small" : { _particleClass = ["vehExpSmoke2small", "none"]; };
+    case "burningvehicle" : {  
+
+            private _posATL = getPosATL _object;
+
+            // Fire
+            private _ps0 = "#particlesource" createVehicleLocal _posATL;
+            _ps0 setPosATL _posATL;
+            _ps0 setParticleParams [
+                ["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 10, 32], "", "Billboard",
+                0, 1, [0, 0, 0.25], [0, 0, 0.5], 1, 1, 0.9, 0.3, [1.5],
+                [[1,1,1, 0.0], [1,1,1, 0.3], [1,1,1, 0.0]],
+                [0.75], 0, 0, "", "", _ps0, rad -45];
+            _ps0 setParticleRandom [0.2, [1, 1, 0], [0.5, 0.5, 0], 0, 0.5, [0, 0, 0, 0], 0, 0];
+            _ps0 setDropInterval 0.03;
+
+            _effects pushBackUnique _ps0;
+
+            // Smoke part 1
+            private _ps1 = "#particlesource" createVehicleLocal _posATL;
+            _ps1 setPosATL _posATL;
+            _ps1 setParticleParams [
+                ["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 7, 1], "", "Billboard",
+                1, 10, [0, 0, 0.5], [0, 0, 2.9], 1, 1.275, 1, 0.066, [4, 5, 10, 10],
+                [[0.3, 0.3, 0.3, 0.33], [0.4, 0.4, 0.4, 0.33], [0.2, 0.2, 0, 0]],
+                [0, 1], 1, 0, "", "", _ps1];
+            _ps1 setParticleRandom [0, [0, 0, 0], [0.33, 0.33, 0], 0, 0.25, [0.05, 0.05, 0.05, 0.05], 0, 0];
+            _ps1 setDropInterval 0.5;
+
+            _effects pushBackUnique _ps1;
+
+            // Smoke part 2
+            private _ps2 = "#particlesource" createVehicleLocal _posATL;
+            _ps2 setPosATL _posATL;
+            _ps2 setParticleParams [
+                ["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 9, 1], "", "Billboard",
+                1, 15, [0, 0, 0.5], [0, 0, 2.9], 1, 1.275, 1, 0.066, [4, 5, 10, 10],
+                [[0.1, 0.1, 0.1, 0.75], [0.4, 0.4, 0.4, 0.5], [1, 1, 1, 0.2]],
+                [0], 1, 0, "", "", _ps2];
+            _ps2 setParticleRandom [0, [0, 0, 0], [0.5, 0.5, 0], 0, 0.25, [0.05, 0.05, 0.05, 0.05], 0, 0];
+            _ps2 setDropInterval 0.25;
+
+            _effects pushBackUnique _ps2;
+
+
+    }; 
+
+    case "fire" : {
+            private _posATL = getPosATL _object;
+
+            // Fire
+            private _ps1 = "#particlesource" createVehicleLocal _posATL;
+            _ps1 setPosATL _posATL;
+            _ps1 setParticleParams [
+                ["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 10, 32], "", "Billboard",
+                1, 1, [0, 0, 0], [0, 0, 0.5], 0, 1, 1, 3, [0.5,1.5],
+                [[1,1,1,0.4], [1,1,1,0.2], [1,1,1,0]],
+                [0.25,1], 1, 1, "", "", _ps1];
+            _ps1 [[setParticleRandom]] [0.2, [0.5, 0.5, 0.25], [0.125, 0.125, 0.125], 0.2, 0.2, [0, 0, 0, 0], 0, 0];
+            _ps1 setDropInterval 0.05;
+
+            // Smoke
+            private _ps2 = "#particlesource" createVehicleLocal _posATL;
+            _ps2 setPosATL _posATL;
+            _ps2 setParticleParams [
+                ["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 7, 1, 1], "", "Billboard",
+                1, 5, [0, 0, 1], [0, 0, 1.5], 0, 1, 1, 0.5, [1.75,2,3,4.5], // timerPeriod → size
+                [[1,1,1,0], [1,1,1,0.5], [1,1,1,0.4], [1,1,1,0.2], [1,1,1,0]],
+                [0.5,0.5], 0, 0, "", "", _ps2];
+            _ps2 setParticleRandom [0.5, [1, 1, 0.4], [0, 0, 0.5], 0, 0.125, [0, 0, 0, 0], rad 30, 0];
+            _ps2 setDropInterval 0.1;
+    };
+
+
+    case "oily_small" : {
+            private _posATL = getPosATL _object;
+
+            private _ps1 = "#particlesource" createVehicleLocal _posATL;
+            _ps1 setPosATL _posATL;
+            _ps1 setParticleParams [
+                ["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 7, 16, 1], "", "Billboard",
+                1, 8, [0, 0, 0], [0, 0, 1.5], 0, 10, 7.9, 0.066, [1, 3, 6],
+                [[0, 0, 0, 0], [0.05, 0.05, 0.05, 1], [0.05, 0.05, 0.05, 1], [0.05, 0.05, 0.05, 1], [0.1, 0.1, 0.1, 0.5], [0.125, 0.125, 0.125, 0]],
+                [0.25], 1, 0, "", "", _ps1];
+            _ps1 setParticleRandom [0, [0.25, 0.25, 0], [0.2, 0.2, 0], 0, 0.25, [0, 0, 0, 0.1], 0, 0];
+            _ps1 setDropInterval 0.05;
+    };
+
+
+    case "oily_medium" : {
+            private _posATL = getPosATL _object;
+
+            private _ps1 = "#particlesource" createVehicleLocal _posATL;
+            _ps1 setPosATL _posATL;
+            _ps1 setParticleParams [
+                ["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 7, 16, 1], "", "Billboard",
+                1, 8, [0, 0, 0], [0, 0, 2.5], 0, 10, 7.9, 0.066, [2, 6, 12],
+                [[0, 0, 0, 0], [0.05, 0.05, 0.05, 1], [0.05, 0.05, 0.05, 1], [0.05, 0.05, 0.05, 1], [0.1, 0.1, 0.1, 0.5], [0.125, 0.125, 0.125, 0]],
+                [0.25], 1, 0, "", "", _ps1];
+            _ps1 setParticleRandom [0, [0.25, 0.25, 0], [0.2, 0.2, 0], 0, 0.25, [0, 0, 0, 0.1], 0, 0];
+            _ps1 setDropInterval 0.1;
+    };
+
+
+    case "oily_large" : {
+            private _posATL = getPosATL _object;
+
+            private _ps1 = "#particlesource" createVehicleLocal _posATL;
+            _ps1 setPosATL _posATL;
+            _ps1 setParticleParams [
+                ["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 7, 16, 1], "", "Billboard",
+                1, 8, [0, 0, 0], [0, 0, 2.5], 0, 10, 7.9, 0.066, [4, 12, 20],
+                [[0, 0, 0, 0], [0.05, 0.05, 0.05, 1], [0.05, 0.05, 0.05, 1], [0.05, 0.05, 0.05, 1], [0.1, 0.1, 0.1, 0.5], [0.125, 0.125, 0.125, 0]],
+                [0.25], 1, 0, "", "", _ps1];
+            _ps1 setParticleRandom [0, [0.25, 0.25, 0], [0.2, 0.2, 0], 0, 0.25, [0, 0, 0, 0.1], 0, 0];
+            _ps1 setDropInterval 0.2;
+    };
+
+    case "wood_light" : {
+            private _posATL = getPosATL _object;
+
+            private _ps1 = "#particlesource" createVehicleLocal _posATL;
+            _ps1 setPosATL _posATL;
+            _ps1 setParticleParams [
+                ["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 9, 16, 0], "", "Billboard",
+                1, 8, [0, 0, 0], [0, 0, 1.5], 0, 10, 7.9, 0.066, [1, 3, 6],
+                [[0.5, 0.5, 0.5, 0], [0.5, 0.5, 0.5, 0.15], [0.5, 0.5, 0.5, 0.15], [0.5, 0.5, 0.5, 0.1], [0.75, 0.75, 0.75, 0.075], [1, 1, 1, 0]],
+                [0.25], 1, 0, "", "", _ps1];
+            _ps1 setParticleRandom [0, [0.25, 0.25, 0], [0.2, 0.2, 0], 0, 0.25, [0, 0, 0, 0.1], 0, 0];
+            _ps1 setDropInterval 0.05;
+    };
+   
     default {  /*...code...*/ }; 
 };
 
-private _effects = [];
-_particleClass params ["_big", "_small"];
 
-private _pos01 = getPos _object;
-
-_source02 = "#particlesource" createVehicleLocal _pos01;
-_source02 setParticleClass _big;
-_source02 attachto [_object,[0,0,0]];
-_effects pushBackUnique _source02;
-
-if (_small != "none") then {
-    _source05 = "#particlesource" createVehicleLocal _pos01;
-    _source05 setParticleClass _small;
-    _source05 attachto [_object,[0,0,0]];
-    _effects pushBackUnique _source05;
-};
-
-_li = "#lightpoint" createVehicleLocal _pos01;
-_li setLightBrightness 0.08;
-_li setLightAmbient [1,0.28,0.05];
-_li setLightColor [1,0.28,0.05];
-_li lightAttachObject [_object, [0,0,0]];
-_effects pushBackUnique _li;
 
 _object setVariable ["effects",_effects];
 
