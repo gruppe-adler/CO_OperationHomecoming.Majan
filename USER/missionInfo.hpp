@@ -15,76 +15,7 @@ class CfgSFX
 {
     sounds[] = {};
 
-    class sfxsound
-    {
-        name = "sfxsound";
-        sounds[]={sfxsound};
-        sfxsound[]={"USER\sound\sfxsound.ogg",35,1,150,1,1,1,0};
-        empty[]= {"",0,0,0,0,0,0,0};
-    };
- 
-    class sfxsound2
-    {
-        name = "sfxsound2";
-        sounds[]={sfxsound};
-        sfxsound[]={"USER\sound\sfxsound2.ogg",35,1,150,1,1,1,0};
-        empty[]= {"",0,0,0,0,0,0,0};
-    };
-
-    class sfxsound3
-    {
-        name = "sfxsound3";
-        sounds[]={sfxsound};
-        sfxsound[]={"USER\sound\sfxsound3.ogg",35,1,150,1,1,1,0};
-        empty[]= {"",0,0,0,0,0,0,0};
-    };
-
-    class sfxsound4
-    {
-        name = "sfxsound4";
-        sounds[]={sfxsound};
-        sfxsound[]={"USER\sound\sfxsound4.ogg",35,1,150,1,1,1,0};
-        empty[]= {"",0,0,0,0,0,0,0};
-    };
-
-    class sfxsound5
-    {
-        name = "sfxsound5";
-        sounds[]={sfxsound};
-        sfxsound[]={"USER\sound\sfxsound5.ogg",35,1,150,1,1,1,0};
-        empty[]= {"",0,0,0,0,0,0,0};
-    };
-        class sfxsound6
-    {
-        name = "sfxsound6";
-        sounds[]={sfxsound};
-        sfxsound[]={"USER\sound\sfxsound2.ogg",35,1,150,1,1,1,0};
-        empty[]= {"",0,0,0,0,0,0,0};
-    };
-
-    class sfxsound7
-    {
-        name = "sfxsound7";
-        sounds[]={sfxsound};
-        sfxsound[]={"USER\sound\sfxsound3.ogg",35,1,150,1,1,1,0};
-        empty[]= {"",0,0,0,0,0,0,0};
-    };
-
-    class sfxsound8
-    {
-        name = "sfxsound8";
-        sounds[]={sfxsound};
-        sfxsound[]={"USER\sound\sfxsound4.ogg",35,1,150,1,1,1,0};
-        empty[]= {"",0,0,0,0,0,0,0};
-    };
-
-    class sfxsound9
-    {
-        name = "news1";
-        sounds[]={sfxsound};
-        sfxsound[]={"USER\sound\news1.ogg",35,1,150,1,1,1,0};
-        empty[]= {"",0,0,0,0,0,0,0};
-    };
+   
         
     class sfxsound10
     {
@@ -126,13 +57,7 @@ class CfgSFX
         empty[]= {"",0,0,0,0,0,0,0};
     };
         
-    class sfxsound15
-    {
-        name = "Britishnews";
-        sounds[]={sfxsound};
-        sfxsound[]={"USER\sound\Britishnews.ogg",35,1,150,1,1,1,0};
-        empty[]= {"",0,0,0,0,0,0,0};
-    };
+    
 
      class sfxsound16
     {
@@ -142,13 +67,7 @@ class CfgSFX
         empty[]= {"",0,0,0,0,0,0,0};
     };
         
-    class sfxsound17
-    {
-        name = "IEDchatter";
-        sounds[]={sfxsound};
-        sfxsound[]={"USER\sound\IEDchatter.ogg",35,1,150,1,1,1,0};
-        empty[]= {"",0,0,0,0,0,0,0};
-    };
+    
 
     class sfxsound18
     {
