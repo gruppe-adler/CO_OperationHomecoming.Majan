@@ -24,6 +24,11 @@ if (!isServer) exitWith {};
             if ((uniform _x) isEqualTo "") then {
                 _x setUnitLoadout (typeOf _x);
             };
+
+            // add beard for taliban
+            if (side _x == independent) then {
+                _x addGoggles selectRandom ["TRYK_Beard_BK", "TRYK_Beard_BK2", "TRYK_Beard_BK3", "TRYK_Beard_BK4"];
+            };
         } forEach units _group;
     }, [_group], 3] call CBA_fnc_waitAndExecute;
    

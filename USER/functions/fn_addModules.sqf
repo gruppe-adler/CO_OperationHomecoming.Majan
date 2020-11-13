@@ -177,6 +177,16 @@
     }] call zen_custom_modules_fnc_register;
 
 
+    ["H O M E C O M I N G - FX", "Abuser Pisser",
+    {
+      // Get all the passed parameters
+      params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+      [abuserPilot, abuserPisser] call homecoming_fnc_pilotAnim;
+
+    }] call zen_custom_modules_fnc_register;
+
+
 
 
     ["H O M E C O M I N G - SFX", "Prayer",

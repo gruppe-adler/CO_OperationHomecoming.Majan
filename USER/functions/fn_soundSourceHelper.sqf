@@ -12,3 +12,5 @@ _helper addEventHandler ["Deleted", {
   params ["_entity"];
   deleteVehicle (_entity getVariable ["soundSource", objNull]);
 }];
+
+_helper

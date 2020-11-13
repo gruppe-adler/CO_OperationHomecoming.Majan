@@ -173,6 +173,14 @@ class CfgSFX
         sfxsound[]={"USER\sound\arabicsong2.ogg",35,1,150,1,1,1,0};
         empty[]= {"",0,0,0,0,0,0,0};
     };
+
+    class piss
+    {
+        name = "piss";
+        sounds[]={sfxsound};
+        sfxsound[]={"USER\sound\piss.ogg",10,1,50,1,1,1,0};
+        empty[]= {"",0,0,0,0,0,0,0};
+    };
 };
 
 class CfgVehicles
@@ -275,6 +283,11 @@ class CfgVehicles
     class sfxsound20 // class name to be used with createSoundSource
     {
         sound = "sfxsound20"; // reference to CfgSFX class
+    };
+
+    class piss // class name to be used with createSoundSource
+    {
+        sound = "piss"; // reference to CfgSFX class
     };
 
 
