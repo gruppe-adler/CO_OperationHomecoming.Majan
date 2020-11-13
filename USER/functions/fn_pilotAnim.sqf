@@ -5,16 +5,19 @@ params ["_unit", "_abuser"];
 _unit addEventHandler ["animDone", {
     params ["_entity", "_anim"];
     
-    _entity playMoveNow _anim;
-
-
-
-    if (abuserPilot getVariable ["pissing_interrupted", false]) then {
-        _entity removeAllEventHandlers "AnimDone";
-        [_entity,"AinjPpneMstpSnonWnonDnon"] remoteExecCall ['switchMove'];
-    };    
+    _entity playMoveNow _anim; 
 }];
 
+[{
+    params ["_unit", "_abuser"];
+    (_abuser getVariable ["pissing_interrupted", false])
+},
+{
+    params ["_unit", "_abuser"];
+    _unit removeAllEventHandlers "AnimDone";
+    [_unit,"AinjPpneMstpSnonWnonDnon"] remoteExecCall ['switchMove'];
+
+}, [_unit, _abuser]] call CBA_fnc_waitUntilAndExecute;
 
 
 [_abuser] spawn {
