@@ -8,6 +8,8 @@ if (isNull introPilot || isNull introNissan2) exitWith {
     sleep 5;
     diwako_dui_main_toggled_off = false;
     1 fadeMusic _musicVolumeCache;
+
+    player action ['WeaponOnBack', player];
 };
 
 private _camera = "camera" camCreate (getPos introPos_1);
@@ -74,6 +76,8 @@ sleep 5;
 _camera camSetPos (getPos introPos_8);
 _camera camCommit 10;
 sleep 15;  
+
+player action ['WeaponOnBack', player]; // prepare to look good
 
 cutText ["", "BLACK OUT", 5];
 sleep 5;

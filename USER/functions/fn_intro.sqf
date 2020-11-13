@@ -12,6 +12,7 @@
             cutText ["", "BLACK IN", 3];
             3 fadeSound 1;
             diwako_dui_main_toggled_off = false;
+            player action ['WeaponOnBack', player];
         };
     },time] call CBA_fnc_waitUntilAndExecute;
 
