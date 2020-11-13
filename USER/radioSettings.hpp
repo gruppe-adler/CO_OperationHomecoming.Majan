@@ -23,22 +23,27 @@
 class shortrange {
     class net1 {
         freq = 50;
+        name = "Command Kanal";
     };
 
     class net2 {
         freq = 60;
+        name = "Alpha";
     };
 
     class net3 {
         freq = 70;
+        name = "Bravo";
     };
 
     class net4 {
         freq = 80;
+        name = "Charlie";
     };
 
     class net5 {
         freq = 90;
+        name = "Mama";
     };
 
     class net6 {

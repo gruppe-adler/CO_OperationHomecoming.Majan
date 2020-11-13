@@ -2,7 +2,6 @@ params ["_object", ["_effect", "small"], ["_instant", false]];
 
 private _particleClass = ["ObjectDestructionSmokeSmallx", "ObjectDestructionSmoke1_2Smallx"];
 
-
 switch (_effect) do { 
     case "small" : {  _particleClass = ["ObjectDestructionSmokeSmallx", "ObjectDestructionSmoke1_2Smallx"]; }; // longish
     case "small2": { _particleClass = ["SmallDestructionSmoke", "none"]; };
@@ -68,3 +67,5 @@ if (_instant) then {
     
     }, [_object], 0.5] call CBA_fnc_waitAndExecute;
 };
+
+diag_log format ["created smoke %1", _effect];

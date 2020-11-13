@@ -61,6 +61,10 @@ _camera camCommit 10;
 sleep 15;
 cutText ["", "BLACK OUT", 5];
 sleep 5;
+
+introNissan2 hideObject false;
+introUral2 hideObject false;
+
 _camera camSetPos (getPos introPos_7);
 _camera camSetTarget introNissan2;
 _camera camCommit 0;
