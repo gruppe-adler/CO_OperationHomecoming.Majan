@@ -14,6 +14,7 @@ class homecoming
 
            class createSmoke;
            class fog;
+           class handleDamageVehicle;
            class intro { postInit = 1; };
            class startIntro;
            

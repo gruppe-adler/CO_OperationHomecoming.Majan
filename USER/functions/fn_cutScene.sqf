@@ -61,6 +61,7 @@ diwako_dui_main_toggled_off = true;
             date select 3 >= 20
         }, {
             setTimeMultiplier 1;
+            [] remoteExec ["homecoming_fnc_fog", [0,-2] select isDedicated];
         }] call CBA_fnc_waitUntilAndExecute;
 
 
@@ -105,7 +106,7 @@ diwako_dui_main_toggled_off = true;
         sleep 2;
 
         if (isServer && date select 3 < 20) then {
-            skipTime 3;
+            skipTime 4;
         };
 
         sleep 2;
@@ -118,7 +119,7 @@ diwako_dui_main_toggled_off = true;
         sleep 2;
 
         if (isServer && date select 3 < 20) then {
-            skipTime 3;
+            skipTime 4;
         };
 
         sleep 2;
@@ -131,7 +132,8 @@ diwako_dui_main_toggled_off = true;
         sleep 2;
 
         if (isServer && date select 3 < 20) then {
-            skipTime 3;
+            [[2035,7,11,20,0]] remoteExec ["setDate"];
+            0 setOvercast 0; forceWeatherChange;
         };
 
         sleep 2;
@@ -144,7 +146,7 @@ diwako_dui_main_toggled_off = true;
         sleep 2;
 
         if (isServer && date select 3 < 20) then {
-            skipTime 3;
+            skipTime 4;
         };
 
         sleep 2;

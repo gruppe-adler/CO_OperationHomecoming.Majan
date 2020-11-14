@@ -6,19 +6,18 @@ if (!hasInterface) exitWith {};
 if (missionNamespace getVariable ["localFogRunning", false]) exitWith {};
 missionNamespace setVariable ["localFogRunning", true];
 
-params ["_unit"];
-
+private _unit = player;
 private _radius = 250;
 private _density = 3;
 
-player setVariable ["fogLocalOff", false]; 
+_unit setVariable ["fogLocalOff", false]; 
 
 [{
 	params ["_args", "_handle"];
 	_args params ["_unit", "_radius", "_density"];
 
 	// position adjusted for vehicles direction and speed
-	private _position = (position player) vectorAdd (velocity player vectorMultiply 10);
+	private _position = (position _unit) vectorAdd ((velocity (vehicle _unit)) vectorMultiply 10);
 
 	private _position = (position _unit) getPos [_radius * sqrt random 1, random 360];
 	_position set [2,-1.5];
