@@ -52,6 +52,10 @@ intro_txt_1 hideObject true;
 intro_txt_2 hideObject true;
 intro_txt_3 hideObject true;
 
+introNissan hideObject true;
+introUral hideObject true;
+introFlag hideObject true;
+
 _camera camSetTarget introPilot;
 _camera camCommit 10;
 sleep 10;  
@@ -62,10 +66,17 @@ _camera camCommit 10;
 
 sleep 15;
 cutText ["", "BLACK OUT", 5];
-sleep 5;
+sleep 2;
+
+if (isServer) then {
+    (driver introNissan2) doMove [1877.96,2298.75,0];
+};
+
+sleep 3;
 
 introNissan2 hideObject false;
 introUral2 hideObject false;
+introFlag2 hideObject false;
 
 _camera camSetPos (getPos introPos_7);
 _camera camSetTarget introNissan2;

@@ -52,8 +52,8 @@ _unit addEventHandler ["animDone", {
         sleep 0.02;
         if (_abuser getVariable ["pissing_interrupted", false]) exitWith {
             if (!isNull _stream) then {
-                deleteVehicle _stream;
-                deleteVehicle _helper;
+            deleteVehicle _stream;
+            deleteVehicle _helper;
             };
         };
     };
@@ -61,8 +61,8 @@ _unit addEventHandler ["animDone", {
     for "_i" from 1 to 8 do {
         if (_abuser getVariable ["pissing_interrupted", false]) exitWith {
             if (!isNull _stream) then {
-                deleteVehicle _stream;
-                deleteVehicle _helper;
+            deleteVehicle _stream;
+            deleteVehicle _helper;
             };
         };
         sleep 0.5;
@@ -71,7 +71,7 @@ _unit addEventHandler ["animDone", {
     if (_abuser getVariable ["pissing_interrupted", false]) exitWith {
         if (!isNull _stream) then {
             deleteVehicle _stream;
-                deleteVehicle _helper;
+            deleteVehicle _helper;
         };
     };
     
@@ -80,13 +80,13 @@ _unit addEventHandler ["animDone", {
         sleep 0.02;
         if (_abuser getVariable ["pissing_interrupted", false]) exitWith {
             deleteVehicle _stream;
-                deleteVehicle _helper;
+            deleteVehicle _helper;
         };
     };
     if (_abuser getVariable ["pissing_interrupted", false]) exitWith {
        if (!isNull _stream) then {
             deleteVehicle _stream;
-                deleteVehicle _helper;
+            deleteVehicle _helper;
         };
     };
 
@@ -95,13 +95,13 @@ _unit addEventHandler ["animDone", {
         sleep 0.02;
         if (_abuser getVariable ["pissing_interrupted", false]) exitWith {
             deleteVehicle _stream;
-                deleteVehicle _helper;
+            deleteVehicle _helper;
         };
     };
     if (_abuser getVariable ["pissing_interrupted", false]) exitWith {
         if (!isNull _stream) then {
             deleteVehicle _stream;
-                deleteVehicle _helper;
+            deleteVehicle _helper;
         };
     };
     
@@ -110,13 +110,13 @@ _unit addEventHandler ["animDone", {
         sleep 0.02;
         if (_abuser getVariable ["pissing_interrupted", false]) exitWith {
             deleteVehicle _stream;
-                deleteVehicle _helper;
+            deleteVehicle _helper;
         };
     };
     if (_abuser getVariable ["pissing_interrupted", false]) exitWith {
         if (!isNull _stream) then {
             deleteVehicle _stream;
-                deleteVehicle _helper;
+            deleteVehicle _helper;
         };
     };
     
@@ -125,13 +125,13 @@ _unit addEventHandler ["animDone", {
         sleep 0.02;
         if (_abuser getVariable ["pissing_interrupted", false]) exitWith {
             deleteVehicle _stream;
-                deleteVehicle _helper;
+            deleteVehicle _helper;
         };
     };
     if (_abuser getVariable ["pissing_interrupted", false]) exitWith {
         if (!isNull _stream) then {
             deleteVehicle _stream;
-                deleteVehicle _helper;
+            deleteVehicle _helper;
         };
     };
     
@@ -140,13 +140,13 @@ _unit addEventHandler ["animDone", {
         sleep 0.02;
         if (_abuser getVariable ["pissing_interrupted", false]) exitWith {
             deleteVehicle _stream;
-                deleteVehicle _helper;
+            deleteVehicle _helper;
         };
     };
     if (_abuser getVariable ["pissing_interrupted", false]) exitWith {
         if (!isNull _stream) then {
             deleteVehicle _stream;
-                deleteVehicle _helper;
+            deleteVehicle _helper;
         };
     };
     
@@ -155,19 +155,19 @@ _unit addEventHandler ["animDone", {
         sleep 0.02;
         if (_abuser getVariable ["pissing_interrupted", false]) exitWith {
             deleteVehicle _stream;
-                deleteVehicle _helper;
+            deleteVehicle _helper;
         };
     };
     if (_abuser getVariable ["pissing_interrupted", false]) exitWith {
         if (!isNull _stream) then {
             deleteVehicle _stream;
-                deleteVehicle _helper;
+            deleteVehicle _helper;
         };
     };
 
     if (!isNull _stream) then {
         deleteVehicle _stream;
-                deleteVehicle _helper;
+        deleteVehicle _helper;
     };
     
 };
@@ -176,7 +176,9 @@ _abuser addEventHandler ["Hit", {
     params ["_unit"];
 
     _unit setVariable ["pissing_interrupted", true];
-    _unit switchMove "Acts_Stunned_Unconscious";
+    [_unit, "Acts_Stunned_Unconscious"] remoteExec ["switchMove"];
+
+    [[_unit], "user\functions\fn_cutScene.sqf"] remoteExec ["BIS_fnc_execVM"];
 
     _unit addEventHandler ["AnimDone", {
         params ["_unit"];
