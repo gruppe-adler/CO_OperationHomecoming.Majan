@@ -53,7 +53,6 @@ intro_txt_2 hideObject true;
 intro_txt_3 hideObject true;
 
 introNissan hideObject true;
-introUral hideObject true;
 introFlag hideObject true;
 
 _camera camSetTarget introPilot;
@@ -64,18 +63,17 @@ _camera camSetPos (getPos introPos_6);
 _camera camSetFOV 0.4;
 _camera camCommit 10;
 
-sleep 15;
-cutText ["", "BLACK OUT", 5];
-sleep 2;
+sleep 10;
 
 if (isServer) then {
-    (driver introNissan2) doMove [1877.96,2298.75,0];
+    (group introNissan2) addWaypoint [[1877.96,2298.75,0],0];
 };
 
-sleep 3;
+sleep 5;
+cutText ["", "BLACK OUT", 5];
+sleep 5;
 
 introNissan2 hideObject false;
-introUral2 hideObject false;
 introFlag2 hideObject false;
 
 _camera camSetPos (getPos introPos_7);
@@ -105,4 +103,4 @@ sleep 5;
 diwako_dui_main_toggled_off = false;
 1 fadeMusic _musicVolumeCache;
 
-
+["FOB Revolver", "06:00 Uhr"] spawn BIS_fnc_infoText;

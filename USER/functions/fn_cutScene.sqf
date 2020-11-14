@@ -1,3 +1,10 @@
+cutText ["", "BLACK IN", 1];
+3 fadeSound 1;
+private _musicVolumeCache = musicVolume;
+0 fadeMusic 1;
+diwako_dui_main_toggled_off = true;
+
+
 [{
     isNull abuserPisser
 },{
@@ -27,7 +34,7 @@
         _playerStandIn addEventHandler ["AnimDone", {
             params ["_entity", "_anim"];
 
-            if (missionNamespace setVariable ["cutsceneDone", false]) exitWith {
+            if (missionNamespace getVariable ["cutsceneDone", false]) exitWith {
                 _entity removeAllEventHandlers "AnimDone";
                 [_playerStandIn, ""] remoteExec ["switchMove"];
             };
@@ -38,7 +45,7 @@
         abuserPilot addEventHandler ["AnimDone", {
             params ["_entity", "_anim"];
 
-            if (missionNamespace setVariable ["cutsceneDone", false]) exitWith {
+            if (missionNamespace getVariable ["cutsceneDone", false]) exitWith {
                 _entity removeAllEventHandlers "AnimDone";
                 [abuserPilot, ""] remoteExec ["switchMove"];
             };
@@ -59,97 +66,114 @@
 
     };
 
+    [_musicVolumeCache] spawn {
+        params ["_musicVolumeCache"];
 
-    sleep 2;
+        sleep 2;
 
-    cutText ["", "BLACK IN", 3];
+        cutText ["", "BLACK IN", 3];
 
-    private _position = (getPos cutsceneHelper_3);
-    _position set [2,3];
+        private _position = (getPos cutsceneHelper_3);
+        _position set [2,3];
 
-    _camera camSetPos _position;
-    _camera camSetTarget abuserPilot;
-    _camera camSetFOV 0.6;
-    _camera camCommit 0;
-
-    _camera camSetPos (getPos cutsceneHelper_1);
-    _camera camSetTarget abuserPilot;
-    _camera camSetFOV 0.5;
-    _camera camCommit 25;
-    sleep 6;
+        private _camera = "camera" camCreate _position;
 
 
-    cutText ["", "BLACK OUT", 1];
-    sleep 2;
+        showCinemaBorder true;
 
-    if (isServer && date select 3 < 20) then {
-        skipTime 3;
+
+        _camera cameraEffect ["internal", "BACK"];
+        _camera camCommand "inertia on";
+        _camera camSetPos _position;
+        _camera camSetTarget abuserPisser;
+        _camera camSetFOV 0.6;
+        _camera camCommit 0;
+
+        _camera camSetPos _position;
+        _camera camSetTarget abuserPilot;
+        _camera camSetFOV 0.6;
+        _camera camCommit 0;
+
+        _camera camSetPos (getPos cutsceneHelper_1);
+        _camera camSetTarget abuserPilot;
+        _camera camSetFOV 0.5;
+        _camera camCommit 25;
+        sleep 6;
+
+
+        cutText ["", "BLACK OUT", 1];
+        sleep 2;
+
+        if (isServer && date select 3 < 20) then {
+            skipTime 3;
+        };
+
+        sleep 2;
+
+        cutText ["", "BLACK IN", 1];
+
+        sleep 6;
+
+        cutText ["", "BLACK OUT", 1];
+        sleep 2;
+
+        if (isServer && date select 3 < 20) then {
+            skipTime 3;
+        };
+
+        sleep 2;
+
+        cutText ["", "BLACK IN", 1];
+
+        sleep 6;
+
+        cutText ["", "BLACK OUT", 1];
+        sleep 2;
+
+        if (isServer && date select 3 < 20) then {
+            skipTime 3;
+        };
+
+        sleep 2;
+
+        cutText ["", "BLACK IN", 1];
+
+        sleep 6;
+
+        cutText ["", "BLACK OUT", 1];
+        sleep 2;
+
+        if (isServer && date select 3 < 20) then {
+            skipTime 3;
+        };
+
+        sleep 2;
+
+        cutText ["", "BLACK IN", 1];
+
+        sleep 6;
+
+
+        missionNamespace setVariable ["cutsceneDone", true, true];
+
+        _camera cameraEffect ["terminate","back"];
+        camDestroy _camera;
+        cutText ["", "BLACK FADED", 5];
+        sleep 5;
+
+        cutText ["", "BLACK IN", 5];
+
+        sleep 5;
+
+        diwako_dui_main_toggled_off = false;
+        1 fadeMusic _musicVolumeCache;
+
+
+        ["Pilot stabilisiert und außer Lebensgefahr."," Return to Base!"] spawn BIS_fnc_infoText;
+
     };
 
-    sleep 2;
-
-    cutText ["", "BLACK IN", 1];
-
-    sleep 6;
-
-    cutText ["", "BLACK OUT", 1];
-    sleep 2;
-
-    if (isServer && date select 3 < 20) then {
-        skipTime 3;
-    };
-
-    sleep 2;
-
-    cutText ["", "BLACK IN", 1];
-
-    sleep 6;
-
-    cutText ["", "BLACK OUT", 1];
-    sleep 2;
-
-    if (isServer && date select 3 < 20) then {
-        skipTime 3;
-    };
-
-    sleep 2;
-
-    cutText ["", "BLACK IN", 1];
-
-    sleep 6;
-
-    cutText ["", "BLACK OUT", 1];
-    sleep 2;
-
-    if (isServer && date select 3 < 20) then {
-        skipTime 3;
-    };
-
-    sleep 2;
-
-    cutText ["", "BLACK IN", 1];
-
-    sleep 6;
-
-
-    missionNamespace setVariable ["cutsceneDone", true, true];
-
-
-    [
-        [
-            ["Pilot stabilized and out of danger. Return to Base!", "<t align = 'center' shadow = '1' size = '1.0'>%1</t>", 15]
-        ]
-    ] spawn BIS_fnc_typeText;
-
-}, []] call CBA_fnc_waitUntilAndExecute;
-
-
-
-cutText ["", "BLACK IN", 1];
-3 fadeSound 1;
-private _musicVolumeCache = musicVolume;
-0 fadeMusic 1;
-diwako_dui_main_toggled_off = true;
+}, [_musicVolumeCache]] call CBA_fnc_waitUntilAndExecute;
 
 
 

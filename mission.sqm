@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1774.4807,19.503138,2829.2954};
-		dir[]={-0.73716569,-0.62040627,0.26800984};
-		up[]={-0.58310366,0.78423625,0.2119974};
-		aside[]={0.341712,1.6880222e-007,0.93988401};
+		pos[]={1767.9419,28.473114,2823.8662};
+		dir[]={-0.75082332,-0.53015727,0.39415538};
+		up[]={-0.46945775,0.8478477,0.24644902};
+		aside[]={0.46484724,7.5087883e-009,0.88548297};
 	};
 };
 binarizationWanted=0;
@@ -6393,7 +6393,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=99;
+		items=98;
 		class Item0
 		{
 			dataType="Layer";
@@ -33566,7 +33566,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={1860.797,10.496296,1954.5172};
+						position[]={1860.7972,10.496296,1954.5184};
 					};
 					areaSize[]={1,-1,1};
 					id=1586;
@@ -41868,7 +41868,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={2068.9531,10.499137,2596.9019};
+						position[]={2068.9556,10.499137,2596.9026};
 					};
 					areaSize[]={1,-1,1};
 					id=1798;
@@ -42254,7 +42254,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={2069.6755,10.499137,2608.9673};
+						position[]={2069.6775,10.499137,2608.9673};
 					};
 					areaSize[]={1,-1,1};
 					id=1800;
@@ -44763,7 +44763,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={1809.9999,10.493239,2360.0095};
+						position[]={1809.9993,10.493239,2360.0083};
 					};
 					areaSize[]={1,-1,1};
 					id=2038;
@@ -44956,7 +44956,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={1810.0155,10.493239,2364.1694};
+						position[]={1810.0149,10.493239,2364.1682};
 					};
 					areaSize[]={1,-1,1};
 					id=2043;
@@ -49052,13 +49052,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1748.4586,12.568705,2830.7822};
+				position[]={1748.459,12.568705,2830.7817};
 				angles[]={0,1.1327187,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				name="introNissan";
 			};
 			id=3031;
 			type="LOP_AFR_Nissan_PKM";
@@ -49437,7 +49438,7 @@ class Mission
 				angles[]={0,4.0258288,0};
 			};
 			side="Independent";
-			flags=6;
+			flags=4;
 			class Attributes
 			{
 				init="call{this hideObject true;}";
@@ -58820,7 +58821,7 @@ class Mission
 			side="Independent";
 			class Entities
 			{
-				items=1;
+				items=2;
 				class Item0
 				{
 					dataType="Object";
@@ -58833,6 +58834,7 @@ class Mission
 					flags=6;
 					class Attributes
 					{
+						rank="CORPORAL";
 						ignoreByDynSimulGrid=1;
 					};
 					id=3261;
@@ -58880,53 +58882,16 @@ class Mission
 						nAttributes=2;
 					};
 				};
-			};
-			class Attributes
-			{
-				garbageCollect=1;
-				behaviour="CARELESS";
-				speedMode="LIMITED";
-			};
-			class CrewLinks
-			{
-				class LinkIDProvider
-				{
-					nextID=1;
-				};
-				class Links
-				{
-					items=1;
-					class Item0
-					{
-						linkID=0;
-						item0=3261;
-						item1=3048;
-						class CustomData
-						{
-							role=1;
-						};
-					};
-				};
-			};
-			id=3260;
-		};
-		class Item95
-		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=1;
-				class Item0
+				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
 						position[]={1984.121,10.482681,2817.7881};
-						angles[]={0,4.0258288,0};
+						angles[]={-0,4.0258288,0};
 					};
 					side="Independent";
-					flags=6;
+					flags=4;
 					class Attributes
 					{
 						ignoreByDynSimulGrid=1;
@@ -58988,14 +58953,24 @@ class Mission
 			{
 				class LinkIDProvider
 				{
-					nextID=1;
+					nextID=2;
 				};
 				class Links
 				{
-					items=1;
+					items=2;
 					class Item0
 					{
 						linkID=0;
+						item0=3261;
+						item1=3048;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
 						item0=3263;
 						item1=3048;
 						class CustomData
@@ -59006,9 +58981,9 @@ class Mission
 					};
 				};
 			};
-			id=3262;
+			id=3260;
 		};
-		class Item96
+		class Item95
 		{
 			dataType="Object";
 			class PositionInfo
@@ -59047,7 +59022,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item97
+		class Item96
 		{
 			dataType="Object";
 			class PositionInfo
@@ -59086,7 +59061,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item98
+		class Item97
 		{
 			dataType="Object";
 			class PositionInfo
