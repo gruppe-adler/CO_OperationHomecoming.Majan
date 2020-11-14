@@ -30,6 +30,8 @@ _car setPilotLight false;
     ["rhs_Flag_Insurgents",[-0.582275,0.484619,1.26717],[[0,1,0],[0,0,1]]]
 ];
 
+private _source = createSoundSource ["sfxsound16", [0,0,0], [], 0];
+[_source, _car] call homecoming_fnc_soundSourceHelper;
 
 /*
 {

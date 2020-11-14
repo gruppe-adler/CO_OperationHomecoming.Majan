@@ -14,5 +14,10 @@ private _music = selectRandom [
 
 ];
 
+{
+    _radio disableCollisionWith _x;
+} forEach (playableUnits + switchableUnits + [_unit]);
+
+
 private _source = createSoundSource [_music, _position, [], 0];
 [_source, _radio] call homecoming_fnc_soundSourceHelper;
