@@ -166,7 +166,7 @@ diwako_dui_main_toggled_off = true;
         cutText ["", "BLACK IN", 5];
 
         sleep 5;
-
+        showCinemaBorder false;
         diwako_dui_main_toggled_off = false;
         1 fadeMusic _musicVolumeCache;
 
