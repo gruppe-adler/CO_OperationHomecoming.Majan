@@ -165,13 +165,27 @@ diwako_dui_main_toggled_off = true;
 
         cutText ["", "BLACK IN", 5];
 
+        [player,""] remoteExec ["switchMove"];
+
         sleep 5;
         showCinemaBorder false;
         diwako_dui_main_toggled_off = false;
         1 fadeMusic _musicVolumeCache;
 
 
+
+
         ["Pilot stabilisiert und außer Lebensgefahr."," Return to Base!"] spawn BIS_fnc_infoText;
+
+        [{
+            params ["_args", "_handle"];
+            
+            setAperture 3;
+
+            if (missionNamespace getVariable ["apertureReset", false]) then {
+                [_handle] call CBA_fnc_removePerFrameHandler;
+            };
+        }, 1, []] call CBA_fnc_addPerFrameHandler;
 
     };
 

@@ -4,7 +4,7 @@ private _posFinal = _positionOrObject;
 
 if (!_createDummy) then {
     _posFinal = getPos _positionOrObject;
-    systemChat "isObject";
+    // systemChat "isObject";
 };
 
 private _helper = _positionOrObject;
