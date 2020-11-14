@@ -1,5 +1,5 @@
 ["CBA_loadingScreenDone", {
-    _waitCondition = {time > (_this + 3)};
+    _waitCondition = {time > (_this + 3) && isGameFocused};
 
     cutText ["loading", "BLACK FADED", 999];
     0 fadeSound 0;
