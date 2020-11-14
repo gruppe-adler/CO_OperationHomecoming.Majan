@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=447;
+		nextID=466;
 	};
 	class Camera
 	{
-		pos[]={3284.7678,38.915909,1908.59};
-		dir[]={-0.88801551,-0.30010271,0.34859246};
-		up[]={-0.27939308,0.95388824,0.10967582};
-		aside[]={0.36542928,2.6648922e-007,0.930911};
+		pos[]={3807.9355,21.95903,1685.0493};
+		dir[]={-0.8410399,-0.53183794,0.099118859};
+		up[]={-0.52819562,0.84683758,0.062249128};
+		aside[]={0.11704487,-8.6751243e-008,0.99314249};
 	};
 };
 binarizationWanted=0;
@@ -9756,7 +9756,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{if (isServer) then { this addMagazineCargoGlobal [""rhs_200rnd_556x45_M_SAW"", 30]; this addMagazineCargoGlobal [""30Rnd_556x45_Stanag"", 120]; [this] call homecoming_fnc_handleDamageVehicle; };}";
+				init="call{if (isServer) then { this addMagazineCargoGlobal [""rhs_200rnd_556x45_M_SAW"", 30]; this addMagazineCargoGlobal [""30Rnd_556x45_Stanag"", 120]; [this] call homecoming_fnc_handleDamageVehicle; this addItemCargoGlobal [""itemGPS"", 1]; };}";
 				textures="rhs_desert";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
@@ -49660,7 +49660,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{if (isServer) then { this addMagazineCargoGlobal [""rhs_200rnd_556x45_M_SAW"", 30]; this addMagazineCargoGlobal [""30Rnd_556x45_Stanag"", 120];[this] call homecoming_fnc_handleDamageVehicle;  };}";
+				init="call{if (isServer) then { this addMagazineCargoGlobal [""rhs_200rnd_556x45_M_SAW"", 30]; this addMagazineCargoGlobal [""30Rnd_556x45_Stanag"", 120];[this] call homecoming_fnc_handleDamageVehicle; this addItemCargoGlobal [""itemGPS"", 1]; };}";
 				textures="rhs_desert";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
@@ -50251,7 +50251,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{if (isServer) then { this addMagazineCargoGlobal [""rhs_200rnd_556x45_M_SAW"", 30]; this addMagazineCargoGlobal [""30Rnd_556x45_Stanag"", 120];[this] call homecoming_fnc_handleDamageVehicle;  };}";
+				init="call{if (isServer) then { this addMagazineCargoGlobal [""rhs_200rnd_556x45_M_SAW"", 30]; this addMagazineCargoGlobal [""30Rnd_556x45_Stanag"", 120];[this] call homecoming_fnc_handleDamageVehicle; this addItemCargoGlobal [""itemGPS"", 1]; };}";
 				textures="rhs_desert";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
@@ -50858,7 +50858,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{if (isServer) then { this addMagazineCargoGlobal [""rhs_200rnd_556x45_M_SAW"", 30]; this addMagazineCargoGlobal [""30Rnd_556x45_Stanag"", 120]; [this] call homecoming_fnc_handleDamageVehicle; };}";
+				init="call{if (isServer) then { this addMagazineCargoGlobal [""rhs_200rnd_556x45_M_SAW"", 30]; this addMagazineCargoGlobal [""30Rnd_556x45_Stanag"", 120]; [this] call homecoming_fnc_handleDamageVehicle; this addItemCargoGlobal [""itemGPS"", 1]; };}";
 				textures="rhs_desert";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
@@ -52081,7 +52081,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{if (isServer) then { this addMagazineCargoGlobal [""rhs_200rnd_556x45_M_SAW"", 30]; this addMagazineCargoGlobal [""30Rnd_556x45_Stanag"", 120]; [this] call homecoming_fnc_handleDamageVehicle; };}";
+				init="call{if (isServer) then { this addMagazineCargoGlobal [""rhs_200rnd_556x45_M_SAW"", 30]; this addMagazineCargoGlobal [""30Rnd_556x45_Stanag"", 120]; [this] call homecoming_fnc_handleDamageVehicle; this addItemCargoGlobal [""itemGPS"", 1];};}";
 				textures="rhs_desert";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
@@ -52653,7 +52653,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{if (isServer) then { this addMagazineCargoGlobal [""rhs_200rnd_556x45_M_SAW"", 30]; this addMagazineCargoGlobal [""30Rnd_556x45_Stanag"", 120]; [this] call homecoming_fnc_handleDamageVehicle; };}";
+				init="call{if (isServer) then { this addMagazineCargoGlobal [""rhs_200rnd_556x45_M_SAW"", 30]; this addMagazineCargoGlobal [""30Rnd_556x45_Stanag"", 120]; [this] call homecoming_fnc_handleDamageVehicle; this addItemCargoGlobal [""itemGPS"", 1];};}";
 				textures="rhs_desert";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
