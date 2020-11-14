@@ -10,8 +10,10 @@ class homecoming
            file = "USER\functions";
 
            class addModules { postInit = 1; };
+           class createMusicCarrier;
 
            class createSmoke;
+           class fog;
            class intro { postInit = 1; };
            class startIntro;
            

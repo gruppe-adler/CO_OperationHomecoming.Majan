@@ -3,9 +3,12 @@
 
 if (!hasInterface) exitWith {};
 
+if (missionNamespace getVariable ["localFogRunning", false]) exitWith {};
+missionNamespace setVariable ["localFogRunning", true];
+
 params ["_unit"];
 
-private _radius = 150;
+private _radius = 250;
 private _density = 3;
 
 player setVariable ["fogLocalOff", false]; 
@@ -17,57 +20,40 @@ player setVariable ["fogLocalOff", false];
 	// position adjusted for vehicles direction and speed
 	private _position = (position player) vectorAdd (velocity player vectorMultiply 10);
 
+	private _position = (position _unit) getPos [_radius * sqrt random 1, random 360];
+	_position set [2,-1.5];
+
+	  drop [ 
+	   "\A3\data_f\cl_basic","","Billboard", 
+	   1,  
+	   15 + random 5, 
+	   _position,[0,0,0],5,0.2,0.1568,0,[5],[[1,1,1,0],[1,1,1,0.1],[1,1,1,0]],[0],1,0,"", "","" 
+	  ];
+
 	// density 
 	for "_i" from 1 to _density do {	
-		private _position = (position _unit) getPos [_radius * sqrt random 1, random 360];
-		_position set [2,-1.5];
-
-		  drop [ 
-		   "\A3\data_f\cl_basic","","Billboard", 
-		   1,  
-		   15 + random 5, 
-		   _position,[0,0,0],5,0.2,0.1568,0,[5],[[1,1,1,0],[1,1,1,0.1],[1,1,1,0]],[0],1,0,"", "","" 
-		  ];
-
 		  // closeup
-		  private _position = (position _unit) getPos [(_radius/2) * sqrt random 1, random 360];
-		_position set [2,-1.5];
+		  private _position = (position _unit) getPos [_radius/1.5 * sqrt random 1, random 360];
+		_position set [2,-1];
 		  drop [ 
 		   "\A3\data_f\ParticleEffects\Universal\smoke.p3d","","Billboard", 
 		   1,  
 		   15 + random 5, 
-		   _position,[0,0,0],5,0.2,0.1568,0,[5],[[1,1,1,0],[1,1,1,0.1],[1,1,1,0]],[0],1,0,"", "","" 
+		   _position,[0,-0.15,-0.025],5,0.2,0.1568,0,[5],[[1,1,1,0],[1,1,1,0.1],[1,1,1,0]],[0.1],1,0,"", "","" 
 		  ];
 	};
 
-	systemChat "running";
-	/*
-	drop ["cl_basic", 
-	"", 
-	"Billboard", 
-	1, 1,
-	[-3.5 * (sin (direction xural)), -3.5 * (cos (direction xural)), 0],
-	[random 0.1, random 0.1, random 0.5],
-	1, 0.005, 0.0042, 0.7, 
-	[0.3,3],
-	[
-		[0.5,0.5,0.5,0], [0.7,0.7,0.7,0.5], [0.9,0.9,0.9,0]
-	],
-	[0,1,0,1,0,1],
-	0.2, 0.2, "", "", xural];
-	*/
 
-
-	if (_unit getVariable ["fogLocalOff", false]) then {
+	if (!(missionNamespace getVariable ["localFogRunning", false])) then {
 		[_handle] call CBA_fnc_removePerFrameHandler;
-		systemChat "stopped running";
+		// systemChat "stopped running";
 	};
 	
 }, 0, [_unit, _radius, _density]] call CBA_fnc_addPerFrameHandler;
 
 
 [{
-		player setVariable ["fogLocalOff", true];
+		missionNamespace setVariable ["localFogRunning", false];
 }, [], 30] call CBA_fnc_waitAndExecute;
 
 

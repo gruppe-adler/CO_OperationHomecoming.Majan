@@ -72,6 +72,8 @@
     {
       // Get all the passed parameters
       params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+      _position = ASLToAGL _position;
+
 
       [_position] remoteExec ["homecoming_fnc_suicideCar", 2];
 
@@ -82,6 +84,7 @@
     {
       // Get all the passed parameters
       params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+      _position = ASLToAGL _position;
 
       
       (leader _objectUnderCursor) setVariable ["RUG_DSAI_OVERRIDE", 1, true];
@@ -92,6 +95,7 @@
     {
       // Get all the passed parameters
       params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+      _position = ASLToAGL _position;
 
 
       (leader _objectUnderCursor) setVariable ["RUG_DSAI_OVERRIDE", 0, true];
@@ -104,6 +108,7 @@
     {
       // Get all the passed parameters
       params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+      _position = ASLToAGL _position;
 
       private _source = createSoundSource ["sfxsound19", _position, [], 0];
       [_source, _position] call homecoming_fnc_soundSourceHelper;
@@ -114,6 +119,7 @@
     {
       // Get all the passed parameters
       params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+      _position = ASLToAGL _position;
 
       private _source = createSoundSource ["sfxsound20", _position, [], 0];
       [_source, _position] call homecoming_fnc_soundSourceHelper;
@@ -124,6 +130,7 @@
     {
       // Get all the passed parameters
       params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+      _position = ASLToAGL _position;
 
       private _source = createSoundSource ["sfxsound10", _position, [], 0];
       [_source, _position] call homecoming_fnc_soundSourceHelper;
@@ -134,6 +141,7 @@
     {
       // Get all the passed parameters
       params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+      _position = ASLToAGL _position;
 
       private _source = createSoundSource ["sfxsound11", _position, [], 0];
       [_source, _position] call homecoming_fnc_soundSourceHelper;
@@ -147,6 +155,7 @@
     {
       // Get all the passed parameters
       params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+      _position = ASLToAGL _position;
 
       private _source = createSoundSource ["sfxsound18", _position, [], 0];
       [_source, _position] call homecoming_fnc_soundSourceHelper;
@@ -159,6 +168,7 @@
     {
       // Get all the passed parameters
       params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+      _position = ASLToAGL _position;
 
       private _source = createSoundSource ["sfxsound16", _position, [], 0];
       [_source, _position] call homecoming_fnc_soundSourceHelper;
@@ -170,6 +180,7 @@
     {
       // Get all the passed parameters
       params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+      _position = ASLToAGL _position;
 
       private _objects = nearestObjects [[worldSize/2, worldSize/2], ["House", "StreetLamp"], 5000];
       {_x switchLight "OFF";} forEach _objects;
@@ -181,11 +192,56 @@
     {
       // Get all the passed parameters
       params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+      _position = ASLToAGL _position;
 
       [abuserPilot, abuserPisser] call homecoming_fnc_pilotAnim;
 
     }] call zen_custom_modules_fnc_register;
 
+
+    ["H O M E C O M I N G - FX", "Fog ON",
+    {
+      // Get all the passed parameters
+      params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+      _position = ASLToAGL _position;
+
+      [] remoteExec ["homecoming_fnc_fog", [0,-2] select isDedicated];
+
+    }] call zen_custom_modules_fnc_register;
+
+    ["H O M E C O M I N G - FX", "Fog OFF",
+    {
+      // Get all the passed parameters
+      params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+      _position = ASLToAGL _position;
+
+      missionNamespace setVariable ["localFogRunning", false, true];
+
+    }] call zen_custom_modules_fnc_register;
+
+
+    ["H O M E C O M I N G - FX", "Radio Carrier",
+    {
+      // Get all the passed parameters
+      params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+      _position = ASLToAGL _position;
+
+      [_position] remoteExecCall ["homecoming_fnc_createMusicCarrier", 2];
+
+    }] call zen_custom_modules_fnc_register;
+
+
+    ["H O M E C O M I N G - SFX", "Outro Music",
+    {
+      // Get all the passed parameters
+      params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+      _position = ASLToAGL _position;
+
+      [3,1] remoteExec ["fadeMusic"];
+      ["CUP_A1QG_Mission_05_outro"] remoteExec ["playMusic"];
+       
+
+    }] call zen_custom_modules_fnc_register;
 
 
 
@@ -193,6 +249,7 @@
     {
       // Get all the passed parameters
       params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+      _position = ASLToAGL _position;
 
       private _source = createSoundSource ["sfxsound14", _position, [], 0];
       [_source, _position] call homecoming_fnc_soundSourceHelper;
