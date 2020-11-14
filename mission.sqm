@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=428;
+		nextID=447;
 	};
 	class Camera
 	{
-		pos[]={1767.9419,28.473114,2823.8662};
-		dir[]={-0.75082332,-0.53015727,0.39415538};
-		up[]={-0.46945775,0.8478477,0.24644902};
-		aside[]={0.46484724,7.5087883e-009,0.88548297};
+		pos[]={1711.6686,35.485241,2283.686};
+		dir[]={0.8995924,-0.42185608,-0.11307184};
+		up[]={0.41856837,0.90666068,-0.052611262};
+		aside[]={-0.12471139,2.7677743e-008,-0.99220002};
 	};
 };
 binarizationWanted=0;
@@ -859,7 +859,7 @@ class CustomAttributes
 								};
 								class value
 								{
-									items=92;
+									items=94;
 									class Item0
 									{
 										class data
@@ -2148,6 +2148,34 @@ class CustomAttributes
 											value="ace_repair_autoshutoffenginewhenstartingrepair";
 										};
 									};
+									class Item92
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="ace_advanced_fatigue_performancefactor";
+										};
+									};
+									class Item93
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="ace_advanced_fatigue_recoveryfactor";
+										};
+									};
 								};
 							};
 						};
@@ -2164,7 +2192,7 @@ class CustomAttributes
 								};
 								class value
 								{
-									items=92;
+									items=94;
 									class Item0
 									{
 										class data
@@ -6303,6 +6331,96 @@ class CustomAttributes
 															};
 														};
 														value=1;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item92
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1.9503074;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item93
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=2.0066743;
 													};
 												};
 												class Item1
@@ -33566,7 +33684,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={1860.7972,10.496296,1954.5184};
+						position[]={1860.7968,10.496296,1954.517};
 					};
 					areaSize[]={1,-1,1};
 					id=1586;
@@ -41868,7 +41986,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={2068.9556,10.499137,2596.9026};
+						position[]={2068.9531,10.499137,2596.9014};
 					};
 					areaSize[]={1,-1,1};
 					id=1798;
@@ -42254,7 +42372,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={2069.6775,10.499137,2608.9673};
+						position[]={2069.6765,10.499137,2608.9673};
 					};
 					areaSize[]={1,-1,1};
 					id=1800;
@@ -44763,7 +44881,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={1809.9993,10.493239,2360.0083};
+						position[]={1809.9987,10.493239,2360.0103};
 					};
 					areaSize[]={1,-1,1};
 					id=2038;
@@ -44956,7 +45074,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={1810.0149,10.493239,2364.1682};
+						position[]={1810.0143,10.493239,2364.1702};
 					};
 					areaSize[]={1,-1,1};
 					id=2043;
@@ -57390,6 +57508,7 @@ class Mission
 					};
 					id=2923;
 					type="Land_ManurePile_01_F";
+					atlOffset=-9.5367432e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -58888,7 +59007,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={1984.121,10.482681,2817.7881};
-						angles[]={-0,4.0258288,0};
+						angles[]={0,4.0258288,0};
 					};
 					side="Independent";
 					flags=4;

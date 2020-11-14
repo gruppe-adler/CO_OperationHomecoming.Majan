@@ -6,7 +6,7 @@
     diwako_dui_main_toggled_off = true;
 
     [_waitCondition,{
-        if (!didJIP) then {
+        if (!didJIP && isMultiplayer) then {
             [] spawn homecoming_fnc_startIntro;
         } else {
             cutText ["", "BLACK IN", 3];
