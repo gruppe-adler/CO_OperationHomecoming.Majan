@@ -194,7 +194,7 @@
       params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
       _position = ASLToAGL _position;
 
-      [abuserPilot, abuserPisser] call homecoming_fnc_pilotAnim;
+      [abuserPilot, abuserPisser] remoteExec ["homecoming_fnc_pilotAnim", 2];
 
     }] call zen_custom_modules_fnc_register;
 

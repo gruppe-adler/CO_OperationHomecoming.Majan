@@ -63,13 +63,9 @@ _camera camSetPos (getPos introPos_6);
 _camera camSetFOV 0.4;
 _camera camCommit 10;
 
-sleep 10;
+sleep 8;
 
-if (isServer) then {
-    (group introNissan2) addWaypoint [[1877.96,2298.75,0],0];
-};
-
-sleep 5;
+sleep 7;
 cutText ["", "BLACK OUT", 5];
 sleep 5;
 

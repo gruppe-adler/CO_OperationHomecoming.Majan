@@ -8,22 +8,22 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=3327;
+		nextID=3333;
 	};
 	class MarkerIDProvider
 	{
-		nextID=30;
+		nextID=31;
 	};
 	class LayerIndexProvider
 	{
-		nextID=485;
+		nextID=542;
 	};
 	class Camera
 	{
-		pos[]={1662.5898,17.610174,2331.9695};
-		dir[]={0.78057146,-0.62285143,-0.052701298};
-		up[]={0.62144578,0.782332,-0.041957963};
-		aside[]={-0.06736365,1.6107151e-008,-0.99773413};
+		pos[]={1910.4054,58.012711,2417.8806};
+		dir[]={-0.76151878,-0.61469084,-0.20563175};
+		up[]={-0.59345841,0.78874904,-0.16025117};
+		aside[]={-0.26069668,-4.1082967e-007,0.96544152};
 	};
 };
 binarizationWanted=0;
@@ -6505,7 +6505,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=102;
+		items=106;
 		class Item0
 		{
 			dataType="Layer";
@@ -33678,7 +33678,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={1860.7959,10.496296,1954.5198};
+						position[]={1860.796,10.496296,1954.5201};
 					};
 					areaSize[]={1,-1,1};
 					id=1586;
@@ -41980,7 +41980,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={2068.959,10.499137,2596.905};
+						position[]={2068.9602,10.499137,2596.9048};
 					};
 					areaSize[]={1,-1,1};
 					id=1798;
@@ -42366,7 +42366,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={2069.6794,10.499137,2608.9673};
+						position[]={2069.6814,10.499137,2608.9673};
 					};
 					areaSize[]={1,-1,1};
 					id=1800;
@@ -44875,7 +44875,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={1809.9962,10.493239,2359.9966};
+						position[]={1809.996,10.493239,2359.9946};
 					};
 					areaSize[]={1,-1,1};
 					id=2038;
@@ -45068,7 +45068,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={1810.0118,10.493239,2364.1565};
+						position[]={1810.0116,10.493239,2364.1545};
 					};
 					areaSize[]={1,-1,1};
 					id=2043;
@@ -59169,7 +59169,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
-						init="call{this disableAI ""ALL"";}";
+						init="call{this disableAI ""ALL""; this enableAI ""ANIM"";}";
 						name="abuserPisser";
 						class Inventory
 						{
@@ -59249,6 +59249,42 @@ class Mission
 			};
 			id=3325;
 			atlOffset=0.13599968;
+		};
+		class Item102
+		{
+			dataType="Marker";
+			position[]={1913.484,10.493,2765.1909};
+			name="mrk_intro_path_1";
+			type="Empty";
+			id=3327;
+			atlOffset=-0.00023937225;
+		};
+		class Item103
+		{
+			dataType="Marker";
+			position[]={1890.7582,10.493,2625.2085};
+			name="mrk_intro_path_2";
+			type="Empty";
+			id=3330;
+			atlOffset=-0.00023937225;
+		};
+		class Item104
+		{
+			dataType="Marker";
+			position[]={1882.0028,10.493,2424.9224};
+			name="mrk_intro_path_3";
+			type="Empty";
+			id=3331;
+			atlOffset=-0.00023937225;
+		};
+		class Item105
+		{
+			dataType="Marker";
+			position[]={1878.3375,10.493,2277.6636};
+			name="mrk_intro_path_4";
+			type="Empty";
+			id=3332;
+			atlOffset=-0.00023937225;
 		};
 	};
 	class Connections

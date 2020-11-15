@@ -17,3 +17,12 @@
     },time] call CBA_fnc_waitUntilAndExecute;
 
 }] call CBA_fnc_addEventHandler;
+
+
+if (isServer) then {
+    [{
+
+        (introNissan2) moveTo (getMarkerPos "mrk_intro_path_3");
+     
+    },[],62]call CBA_fnc_waitAndExecute;
+};

@@ -21,6 +21,7 @@ class homecoming
            class ownerShipHandler { postInit = 1; };
 
            class pilotAnim;
+           class pilotPiss;
            
            class soundSourceHelper;
 
