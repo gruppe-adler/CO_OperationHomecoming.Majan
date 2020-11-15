@@ -9,7 +9,7 @@ diwako_dui_main_toggled_off = true;
     isNull abuserPisser
 },{
     params ["_musicVolumeCache"];
-    
+
     if (isServer) then {
 
         private _playerStandIn = objNull;
@@ -176,7 +176,7 @@ diwako_dui_main_toggled_off = true;
 
 
 
-        ["Pilot stabilisiert und außer Lebensgefahr."," Return to Base!"] spawn BIS_fnc_infoText;
+        ["Pilot stabilisiert","und außer Lebensgefahr.","Return to Base!"] spawn BIS_fnc_infoText;
 
         [{
             params ["_args", "_handle"];

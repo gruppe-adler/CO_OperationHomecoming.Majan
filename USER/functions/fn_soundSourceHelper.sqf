@@ -27,6 +27,11 @@ _helper addEventHandler ["Deleted", {
 
 
 if (!_createDummy) then {
+    _helper addEventHandler ["MPKilled", {
+        params ["_entity"];
+        deleteVehicle (_entity getVariable ["soundSource", objNull]);
+    }];
+
     [{
         params ["_args", "_handle"];
         _args params ["_positionOrObject", "_source"];
