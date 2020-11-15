@@ -39,8 +39,6 @@ if (isServer) then {
     private _source = createSoundSource ["piss", position _abuser, [], 0];
     private _helper = [_source, position _abuser] call homecoming_fnc_soundSourceHelper;
 
-    private _dir = getDir _abuser;
-
     
     [_unit, _abuser] remoteExec ["homecoming_fnc_pilotPiss", [0,-2] select isDedicated];
     

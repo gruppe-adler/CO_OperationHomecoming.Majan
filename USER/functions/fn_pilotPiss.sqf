@@ -1,5 +1,7 @@
 params ["_unit", "_abuser"];
 
+private _dir = getDir _abuser;
+
 _stream = "#particlesource" createVehicleLocal [0,0,0];
 _stream setParticleRandom [0,[0.004,0.004,0.004],[0.01,0.01,0.01],30,0.01,[0,0,0,0],1,0.02,360];
 
