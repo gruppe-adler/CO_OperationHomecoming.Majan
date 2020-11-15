@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=466;
+		nextID=485;
 	};
 	class Camera
 	{
@@ -805,7 +805,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category1
+	class Category0
 	{
 		name="Scenario";
 		class Attribute0
@@ -24349,7 +24349,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{if (isServer) then { [this, ""oily_medium""] call homecoming_fnc_createSmoke;};}";
+						init="call{ [this, ""oily_medium""] call homecoming_fnc_createSmoke;}";
 						disableSimulation=1;
 					};
 					id=2210;
@@ -33656,7 +33656,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{if (isServer) then {  [this, ""burningvehicle""] call homecoming_fnc_createSmoke; };}";
+						init="call{ [this, ""burningvehicle""] call homecoming_fnc_createSmoke; }";
 					};
 					id=3007;
 					type="Land_ShellCrater_02_extralarge_F";
@@ -33678,7 +33678,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={1860.7963,10.496296,1954.5194};
+						position[]={1860.7959,10.496296,1954.5198};
 					};
 					areaSize[]={1,-1,1};
 					id=1586;
@@ -41980,7 +41980,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={2068.9578,10.499137,2596.9036};
+						position[]={2068.959,10.499137,2596.905};
 					};
 					areaSize[]={1,-1,1};
 					id=1798;
@@ -42366,7 +42366,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={2069.679,10.499137,2608.9673};
+						position[]={2069.6794,10.499137,2608.9673};
 					};
 					areaSize[]={1,-1,1};
 					id=1800;
@@ -44875,7 +44875,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={1809.9965,10.493239,2359.9971};
+						position[]={1809.9962,10.493239,2359.9966};
 					};
 					areaSize[]={1,-1,1};
 					id=2038;
@@ -45068,7 +45068,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={1810.0121,10.493239,2364.157};
+						position[]={1810.0118,10.493239,2364.1565};
 					};
 					areaSize[]={1,-1,1};
 					id=2043;
@@ -57026,7 +57026,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
-						init="call{if (isServer) then { [this, ""oily_small""] call homecoming_fnc_createSmoke;};}";
+						init="call{ [this, ""oily_small""] call homecoming_fnc_createSmoke;}";
 						disableSimulation=1;
 					};
 					id=2916;
@@ -57389,7 +57389,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="call{if (isServer) then { [this, ""wood_light""] call homecoming_fnc_createSmoke;};}";
+						init="call{ [this, ""wood_light""] call homecoming_fnc_createSmoke;}";
 						disableSimulation=1;
 					};
 					id=2923;
@@ -57512,7 +57512,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{if (isServer) then { [this, ""wood_light""] call homecoming_fnc_createSmoke;};}";
+						init="call{ [this, ""wood_light""] call homecoming_fnc_createSmoke;}";
 						disableSimulation=1;
 					};
 					id=2932;
@@ -57788,7 +57788,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
-						init="call{if (isServer) then { [this, ""wood_light""] call homecoming_fnc_createSmoke;};}";
+						init="call{ [this, ""wood_light""] call homecoming_fnc_createSmoke;}";
 						disableSimulation=1;
 					};
 					id=2917;
@@ -57830,7 +57830,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{if (isServer) then { [this, ""oily_large""] call homecoming_fnc_createSmoke;};}";
+						init="call{ [this, ""oily_large""] call homecoming_fnc_createSmoke;}";
 						disableSimulation=1;
 					};
 					id=2915;
@@ -57872,7 +57872,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{if (isServer) then { [this, ""wood_light""] call homecoming_fnc_createSmoke;};}";
+						init="call{ [this, ""wood_light""] call homecoming_fnc_createSmoke;}";
 						disableSimulation=1;
 					};
 					id=2914;
