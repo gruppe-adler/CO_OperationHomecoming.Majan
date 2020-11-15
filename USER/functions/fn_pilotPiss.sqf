@@ -15,7 +15,6 @@ for "_i" from 0 to 1 step 0.01 do {
     if (_abuser getVariable ["pissing_interrupted", false]) exitWith {
         if (!isNull _stream) then {
         deleteVehicle _stream;
-        deleteVehicle _helper;
         };
     };
 };
@@ -24,7 +23,6 @@ for "_i" from 1 to 8 do {
     if (_abuser getVariable ["pissing_interrupted", false]) exitWith {
         if (!isNull _stream) then {
         deleteVehicle _stream;
-        deleteVehicle _helper;
         };
     };
     sleep 0.5;
@@ -33,7 +31,6 @@ for "_i" from 1 to 8 do {
 if (_abuser getVariable ["pissing_interrupted", false]) exitWith {
     if (!isNull _stream) then {
         deleteVehicle _stream;
-        deleteVehicle _helper;
     };
 };
 
@@ -42,13 +39,11 @@ for "_i" from 1 to 0.4 step -0.01 do {
     sleep 0.02;
     if (_abuser getVariable ["pissing_interrupted", false]) exitWith {
         deleteVehicle _stream;
-        deleteVehicle _helper;
     };
 };
 if (_abuser getVariable ["pissing_interrupted", false]) exitWith {
    if (!isNull _stream) then {
         deleteVehicle _stream;
-        deleteVehicle _helper;
     };
 };
 
@@ -57,13 +52,11 @@ for "_i" from 0.4 to 0.8 step 0.02 do {
     sleep 0.02;
     if (_abuser getVariable ["pissing_interrupted", false]) exitWith {
         deleteVehicle _stream;
-        deleteVehicle _helper;
     };
 };
 if (_abuser getVariable ["pissing_interrupted", false]) exitWith {
     if (!isNull _stream) then {
         deleteVehicle _stream;
-        deleteVehicle _helper;
     };
 };
 
@@ -72,13 +65,11 @@ for "_i" from 0.8 to 0.2 step -0.01 do {
     sleep 0.02;
     if (_abuser getVariable ["pissing_interrupted", false]) exitWith {
         deleteVehicle _stream;
-        deleteVehicle _helper;
     };
 };
 if (_abuser getVariable ["pissing_interrupted", false]) exitWith {
     if (!isNull _stream) then {
         deleteVehicle _stream;
-        deleteVehicle _helper;
     };
 };
 
@@ -87,13 +78,11 @@ for "_i" from 0.2 to 0.3 step 0.02 do {
     sleep 0.02;
     if (_abuser getVariable ["pissing_interrupted", false]) exitWith {
         deleteVehicle _stream;
-        deleteVehicle _helper;
     };
 };
 if (_abuser getVariable ["pissing_interrupted", false]) exitWith {
     if (!isNull _stream) then {
         deleteVehicle _stream;
-        deleteVehicle _helper;
     };
 };
 
@@ -102,13 +91,11 @@ for "_i" from 0.3 to 0.1 step -0.01 do {
     sleep 0.02;
     if (_abuser getVariable ["pissing_interrupted", false]) exitWith {
         deleteVehicle _stream;
-        deleteVehicle _helper;
     };
 };
 if (_abuser getVariable ["pissing_interrupted", false]) exitWith {
     if (!isNull _stream) then {
         deleteVehicle _stream;
-        deleteVehicle _helper;
     };
 };
 
@@ -117,17 +104,14 @@ for "_i" from 0.1 to 0 step -0.01 do {
     sleep 0.02;
     if (_abuser getVariable ["pissing_interrupted", false]) exitWith {
         deleteVehicle _stream;
-        deleteVehicle _helper;
     };
 };
 if (_abuser getVariable ["pissing_interrupted", false]) exitWith {
     if (!isNull _stream) then {
         deleteVehicle _stream;
-        deleteVehicle _helper;
     };
 };
 
 if (!isNull _stream) then {
     deleteVehicle _stream;
-    deleteVehicle _helper;
 };

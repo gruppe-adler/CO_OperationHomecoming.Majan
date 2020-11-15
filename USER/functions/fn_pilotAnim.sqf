@@ -25,8 +25,7 @@ if (isServer) then {
 [_unit, _abuser] spawn {
     params ["_unit","_abuser"];
 
-    _abuser playMove "Acts_AidlPercMstpSlowWrflDnon_pissing" ;
-   
+   [_abuser, "Acts_AidlPercMstpSlowWrflDnon_pissing"] remoteExec ["switchMove"];
 
     for "_i" from 1 to 8 do {
         if (_abuser getVariable ["pissing_interrupted", false]) exitWith {
@@ -41,6 +40,14 @@ if (isServer) then {
 
     
     [_unit, _abuser] remoteExec ["homecoming_fnc_pilotPiss", [0,-2] select isDedicated];
+
+    [{
+        params ["_abuser"];
+        _abuser getVariable ["pissing_interrupted", false]
+    },{
+        params ["_abuser", "_helper"];
+        deleteVehicle _helper;
+    }, [_abuser, _helper]] call CBA_fnc_waitUntilAndExecute;
     
 };
 
