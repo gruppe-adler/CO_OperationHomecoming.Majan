@@ -133,6 +133,20 @@ switch (_effect) do {
             _ps1 setParticleRandom [0, [0.25, 0.25, 0], [0.2, 0.2, 0], 0, 0.25, [0, 0, 0, 0.1], 0, 0];
             _ps1 setDropInterval 0.05;
     };
+
+    case "tiny" : {
+            private _posATL = getPosATL _object;
+
+            private _ps1 = "#particlesource" createVehicleLocal _posATL;
+            _ps1 setPosATL _posATL;
+            _ps1 setParticleParams [
+                ["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 9, 16, 0], "", "Billboard",
+                1, 2, [0, 0, 0], [0, 0, 1.5], 0, 10, 7.9, 0.066, [.15, .25, .5],
+                [[0.5, 0.5, 0.5, 0], [0.5, 0.5, 0.5, 0.15], [0.5, 0.5, 0.5, 0.15], [0.5, 0.5, 0.5, 0.1], [0.75, 0.75, 0.75, 0.075], [1, 1, 1, 0]],
+                [0.25], 1, 0, "", "", _ps1];
+            _ps1 setParticleRandom [0, [0.05, 0.05, 0], [0.1, 0.1, 0], 0, 0.25, [0, 0, 0, 0.1], 0, 0];
+            _ps1 setDropInterval 0.05;
+    };
    
     default {  /*...code...*/ }; 
 };

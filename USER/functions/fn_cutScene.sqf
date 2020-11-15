@@ -8,7 +8,8 @@ diwako_dui_main_toggled_off = true;
 [{
     isNull abuserPisser
 },{
-        
+    params ["_musicVolumeCache"];
+    
     if (isServer) then {
 
         private _playerStandIn = objNull;

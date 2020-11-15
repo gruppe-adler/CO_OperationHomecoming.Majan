@@ -6,7 +6,7 @@
     diwako_dui_main_toggled_off = true;
 
     [_waitCondition,{
-        if (!didJIP && isMultiplayer) then {
+        if (!didJIP) then {
             [] spawn homecoming_fnc_startIntro;
         } else {
             cutText ["", "BLACK IN", 3];
@@ -17,12 +17,3 @@
     },time] call CBA_fnc_waitUntilAndExecute;
 
 }] call CBA_fnc_addEventHandler;
-
-
-if (isServer) then {
-    [{
-
-        (introNissan2) moveTo (getMarkerPos "mrk_intro_path_3");
-     
-    },[],62]call CBA_fnc_waitAndExecute;
-};

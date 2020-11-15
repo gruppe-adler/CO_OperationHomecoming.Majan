@@ -23,4 +23,18 @@ if (isServer) then {
         "Land_PowerPoleWooden_F"
     ], 5000];  
     { _x switchLight "ON"; } forEach _objects;
+
+    
+    [{
+
+        private _group = createVehicleCrew introNissan2;
+        _group createUnit ["rhssaf_airforce_pilot_mig29", [0,0,0], [], 0, "CARGO"];
+        introNissan2 setVelocityModelSpace [0,3,0.1];
+        introNissan2 forceSpeed 80; 
+        introNissan2 doMove (getMarkerPos "mrk_intro_path_3");      
+
+        diag_log "should drive";
+     
+    },[],70] call CBA_fnc_waitAndExecute;
+
 };

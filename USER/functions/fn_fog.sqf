@@ -51,9 +51,11 @@ _unit setVariable ["fogLocalOff", false];
 }, 0, [_unit, _radius, _density]] call CBA_fnc_addPerFrameHandler;
 
 
+/*
 [{
 		missionNamespace setVariable ["localFogRunning", false];
 }, [], 30] call CBA_fnc_waitAndExecute;
+*/
 
 
 /*

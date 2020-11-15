@@ -51,7 +51,7 @@ if (isServer) then {
     
 };
 
-_abuser addEventHandler ["Hit", {
+_abuser addMPEventHandler ["MPKilled", {
     params ["_unit"];
 
     _unit setVariable ["pissing_interrupted", true, true];
