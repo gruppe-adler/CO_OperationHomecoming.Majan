@@ -63,6 +63,7 @@ diwako_dui_main_toggled_off = true;
         }, {
             setTimeMultiplier 1;
             [] remoteExec ["homecoming_fnc_fog", [0,-2] select isDedicated];
+
         }] call CBA_fnc_waitUntilAndExecute;
 
 
@@ -158,6 +159,21 @@ diwako_dui_main_toggled_off = true;
 
 
         missionNamespace setVariable ["cutsceneDone", true, true];
+
+        // needs to be executed on each client!
+        /*
+        private _objects = nearestObjects [[worldSize/2, worldSize/2], ["House", "StreetLamp"], 5000];
+        {_x switchLight "OFF";} forEach _objects;
+
+         private _objects = nearestObjects [[worldSize/2, worldSize/2], [ 
+            "Land_PowerPoleWooden_L_F",
+            "Land_LampShabby_F", 
+            "Land_PowerPoleWooden_small_F",  
+            "PowerLines_Wires_base_F", 
+            "Land_PowerPoleWooden_F"
+        ], 5000];  
+        { _x switchLight "ON"; } forEach _objects;
+        */
 
         _camera cameraEffect ["terminate","back"];
         camDestroy _camera;
